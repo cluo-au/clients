@@ -122,6 +122,8 @@
 
   .tile{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;flex:none}
   .tile.md{width:38px;height:38px}.tile.md .ic{font-size:18px}
+  .cic{width:1em;height:1em;display:block}
+  .tile.app{width:42px;height:42px;font-size:24px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 6px rgba(16,40,50,.07)}
 
   /* ON YOUR SIDE */
   .cards3{display:grid;grid-template-columns:1fr;gap:12px}
@@ -163,6 +165,13 @@
   <symbol id="i-checks" viewBox="0 0 24 24"><path d="M2 13l4 4 6-7"/><path d="M11 16l2 2 8-9"/></symbol>
   <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></symbol>
+  <symbol id="i-seo" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.4" fill="#E3F3F1" stroke="#057C8C" stroke-width="1.6"/><rect x="6.7" y="9.2" width="1.7" height="3.3" rx="0.6" fill="#15803D"/><rect x="9.15" y="7.7" width="1.7" height="4.8" rx="0.6" fill="#15803D"/><rect x="11.6" y="6.4" width="1.7" height="6.1" rx="0.6" fill="#15803D"/><line x1="14.7" y1="14.7" x2="20" y2="20" stroke="#057C8C" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-googleads" viewBox="0 0 24 24"><rect x="8.8" y="3" width="4.2" height="13" rx="2.1" fill="#FBBC04" transform="rotate(20 10.9 9.5)"/><rect x="11" y="3" width="4.2" height="13" rx="2.1" fill="#4285F4" transform="rotate(-20 13.1 9.5)"/><circle cx="7.9" cy="16.7" r="2.5" fill="#4285F4"/></symbol>
+  <symbol id="i-ai" viewBox="0 0 24 24"><path d="M11 2.5 L12.7 8.3 L18.5 10 L12.7 11.7 L11 17.5 L9.3 11.7 L3.5 10 L9.3 8.3 Z" fill="#7C3AED"/><path d="M18 13 L18.8 15.4 L21.2 16.2 L18.8 17 L18 19.4 L17.2 17 L14.8 16.2 L17.2 15.4 Z" fill="#A78BFA"/></symbol>
+  <symbol id="i-video2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="4.5" fill="#EC4899"/><path d="M10 8.8 L16 12 L10 15.2 Z" fill="#ffffff"/></symbol>
+  <symbol id="i-mappin" viewBox="0 0 24 24"><path d="M12 2c-3.9 0-7 3-7 6.9 0 4.7 7 12.6 7 12.6s7-7.9 7-12.6C19 5 15.9 2 12 2z" fill="#EA4335"/><circle cx="12" cy="9" r="2.6" fill="#ffffff"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M9.5 14.5 L14.5 9.5" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/><path d="M8.5 11.5 L6.7 13.3 a3.4 3.4 0 0 0 4.8 4.8 L13.3 16.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 12.5 L17.3 10.7 a3.4 3.4 0 0 0-4.8-4.8 L10.7 7.7" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-track" viewBox="0 0 24 24"><path d="M4 4 v16 h16" fill="none" stroke="#94A3B8" stroke-width="1.4" stroke-linecap="round"/><path d="M7 15 L11 11 L14 13 L19 7" fill="none" stroke="#15803D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="7" r="1.9" fill="#15803D"/></symbol>
 </defs></svg>
 
 <header class="top">
@@ -268,22 +277,22 @@
         <thead><tr><th class="first"></th><th>Focus</th><th>What we're doing</th></tr></thead>
         <tbody>
           <tr>
-            <td><span class="tile md" style="background:#EEF2FF;color:#4F46E5"><svg class="ic"><use href="#i-layers"/></svg></span></td>
+            <td><span class="tile app"><svg class="cic"><use href="#i-seo"/></svg></span></td>
             <td class="focus-cell">Pillar page</td>
             <td class="doing-cell">Building your "cost of daycare in Auckland" page into your strongest resource, so you show up when parents ask AI and Google about pricing.</td>
           </tr>
           <tr>
-            <td><span class="tile md" style="background:#FFE9F1;color:#DB2777"><svg class="ic"><use href="#i-video"/></svg></span></td>
+            <td><span class="tile app"><svg class="cic"><use href="#i-video2"/></svg></span></td>
             <td class="focus-cell">Short-form video</td>
             <td class="doing-cell">Turning your music programme into TikTok and YouTube Shorts that bring new families in.</td>
           </tr>
           <tr>
-            <td><span class="tile md" style="background:#FFF1E0;color:#EA580C"><svg class="ic"><use href="#i-mega"/></svg></span></td>
+            <td><span class="tile app"><svg class="cic"><use href="#i-googleads"/></svg></span></td>
             <td class="focus-cell">Sharper ads</td>
             <td class="doing-cell">Leading with what makes Sugartree different.</td>
           </tr>
           <tr>
-            <td><span class="tile md" style="background:#E7F8EE;color:#15803D"><svg class="ic"><use href="#i-activity"/></svg></span></td>
+            <td><span class="tile app"><svg class="cic"><use href="#i-track"/></svg></span></td>
             <td class="focus-cell">Live tracking</td>
             <td class="doing-cell">Your dashboard refreshing every week so the numbers stay current.</td>
           </tr>
