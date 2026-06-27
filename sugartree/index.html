@@ -57,6 +57,10 @@
   .kicker{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--brand);font-weight:600}
   .live{display:flex;align-items:center;gap:6px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute)}
   .live .pip{width:6px;height:6px;border-radius:50%;background:rgba(4,163,184,.6)}
+  .map-head-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+  .webbtn{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:#fff;color:var(--brand);box-shadow:0 2px 6px rgba(16,40,50,.06);transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+  .webbtn .ic{font-size:16px}
+  .webbtn:hover{transform:translateY(-1px);box-shadow:0 8px 16px -8px rgba(16,40,50,.4);border-color:var(--brand)}
 
   .stage{position:relative;display:flex;flex-direction:column;align-items:center}
   .top-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2;margin-top:6px}
@@ -181,7 +185,7 @@
   <section class="map" aria-label="Your marketing system">
     <div class="map-head">
       <span class="kicker">System map</span>
-      <span class="live"><span class="pip"></span>Live board</span>
+      <div class="map-head-right"><span class="live"><span class="pip"></span>Live board</span><a class="webbtn" href="https://sugartreelanepreschool.co.nz" target="_blank" rel="noopener noreferrer" title="Website" aria-label="Website"><svg class="ic"><use href="#i-globe"/></svg></a></div>
     </div>
 
     <div class="stage">
