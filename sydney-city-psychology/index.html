@@ -30,9 +30,11 @@ a{color:inherit;text-decoration:none}
 .cluobadge{display:flex;align-items:center;background:rgba(255,255,255,.08);border-radius:8px;padding:5px 9px}
 .cluobadge img{height:12px;width:auto;display:block}
 
-.hero{background:#fff;border-bottom:1px solid #E4E6E9}
-.hero .wrap{display:flex;align-items:center;gap:36px}
+.hero{background:#fff;border-bottom:1px solid #E4E6E9;overflow:hidden}
+.hero .wrap{display:flex;align-items:flex-end;gap:36px}
 .hero-copy{flex:1;padding:50px 0;min-width:0}
+.hero-character{flex:none;align-self:flex-end;height:210px;width:auto;display:block;margin-bottom:-1px}
+@media (max-width:720px){.hero-character{display:none}}
 .eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;margin:0 0 12px}
 h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:42px;line-height:1.1;
  margin:0;color:#053040;letter-spacing:-.015em}
@@ -136,6 +138,7 @@ footer a:hover{color:#fff}
     <h1>Your Google Ads, SEO and AI visibility.</h1>
     <div class="rule"></div>
   </div>
+  <img class="hero-character" src="character.png" alt="">
 </div></div>
 
 <div class="wrap">
