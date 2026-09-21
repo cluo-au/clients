@@ -20,34 +20,47 @@ a{color:inherit;text-decoration:none}
 .topbar{background:#2B010B;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .topbar .client{height:30px;width:auto;display:block}
+.topbar .right{display:flex;align-items:center;gap:14px}
+.siteline{color:rgba(255,255,255,.62);font-size:12.5px;letter-spacing:.01em;display:flex;align-items:center;gap:5px;transition:color .15s}
+.siteline:hover{color:#CAA878}
+.topdiv{width:1px;height:13px;background:rgba(255,255,255,.16)}
 .byline{display:flex;align-items:center;gap:9px}
 .byline span{color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
-.byline img{height:19px;width:auto;display:block;opacity:.95}
 
 .hero{background:#fff;border-bottom:1px solid #E4E6E9}
 .hero .wrap{display:flex;align-items:center;gap:36px}
-.hero-copy{flex:1;padding:54px 0;min-width:0}
+.hero-copy{flex:1;padding:50px 0;min-width:0}
 .eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;margin:0 0 12px}
-h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:44px;line-height:1.1;
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:42px;line-height:1.1;
  margin:0;color:#2B010B;letter-spacing:-.015em}
 .rule{width:56px;height:4px;background:#CAA878;margin:22px 0 0;border-radius:2px}
 .hero-char{flex:none;align-self:flex-end}
-.hero-char img{height:290px;width:auto;display:block}
+.hero-char img{height:260px;width:auto;display:block}
 
-section{padding:38px 0}
+section{padding:34px 0}
 h2{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;
  font-weight:600;margin:0 0 20px}
 
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tiles{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;align-items:stretch}
 .tile{position:relative;background:#fff;border:1px solid #E4E6E9;border-radius:14px;
- padding:24px 22px 22px;display:block;transition:border-color .15s,transform .15s,box-shadow .15s}
+ padding:22px 20px 20px;display:block;overflow:hidden;transition:border-color .15s,transform .15s,box-shadow .15s}
 .tile:hover{border-color:#CAA878;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
-.tile .badge{width:60px;height:60px;border-radius:16px;
- display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.tile h3{font-size:17px;font-weight:600;margin:0 0 3px;color:#2B010B;letter-spacing:-.01em}
-.tile p{font-size:14px;color:#868D96;margin:0;line-height:1.4}
-.tile .go{position:absolute;top:24px;right:22px;color:#B7BDC7;transition:color .15s}
+.tile h3{font-size:16.5px;font-weight:600;margin:0 0 3px;color:#2B010B;letter-spacing:-.01em}
+.tile p{font-size:13.5px;color:#868D96;margin:0;line-height:1.4}
+.tile .go{position:absolute;top:22px;right:20px;color:#B7BDC7;transition:color .15s}
 .tile:hover .go{color:#2B010B}
+
+.tile-stats{background:linear-gradient(135deg,#2B010B 0%,#420018 100%);border-color:#420018;min-height:158px;padding-bottom:14px}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.6)}
+.tile-stats .go{color:rgba(255,255,255,.45)}
+.tile-stats:hover .go{color:#CAA878}
+.tile-stats .badge{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.1);
+ display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.tile-stats .stats-char{position:absolute;right:10px;bottom:0;height:132px;width:auto;opacity:.96}
+.tile-stats .txt{position:relative;z-index:1;max-width:62%}
+
+.badge{width:44px;height:44px;border-radius:12px;display:block;margin-bottom:14px}
 
 .band{background:#FBF6ED;border-top:1px solid #EDDDBE;border-bottom:1px solid #EDDDBE}
 .rows{background:#fff;border:1px solid #E4E6E9;border-radius:14px;overflow:hidden}
@@ -77,6 +90,9 @@ a.row:hover{background:#F6EDDA}
 .side .ib{color:rgba(255,255,255,.72)}
 .sidehead{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#CAA878;
  font-weight:600;margin:0;padding:22px 0 2px}
+.bookbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#CAA878;
+ color:#2B010B;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px}
+.bookbtn:hover{background:#E0C79A}
 
 footer{background:#2B010B;color:rgba(255,255,255,.62);padding:26px 0}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;
@@ -86,20 +102,22 @@ footer a{color:rgba(255,255,255,.85)}
 footer a:hover{color:#fff}
 
 @media(max-width:880px){
- .tiles{grid-template-columns:repeat(2,1fr)}
+ .tiles{grid-template-columns:1fr 1fr}
+ .tile-stats{grid-column:1/-1}
  .two{grid-template-columns:1fr}
  .hero .wrap{gap:22px}
- .hero-char img{height:245px}
- h1{font-size:34px}
+ .hero-char img{height:220px}
+ h1{font-size:32px}
 }
 @media(max-width:620px){
  .tiles{grid-template-columns:1fr}
+ .tile-stats{grid-column:auto}
  .hero .wrap{flex-direction:column-reverse;align-items:flex-start;padding-top:30px}
  .hero-copy{padding:20px 0 34px}
  .hero-char{align-self:flex-start}
- .hero-char img{height:190px}
+ .hero-char img{height:170px}
  .row .rd{display:none}
- .tile .badge{width:52px;height:52px;border-radius:14px}
+ .topbar .siteline span.long{display:none}
 }
 </style>
 </head>
@@ -107,7 +125,11 @@ footer a:hover{color:#fff}
 
 <div class="topbar"><div class="wrap">
   <div class="client" style="font-family:Georgia,'Times New Roman',serif;font-size:22px;letter-spacing:.14em;color:#CAA878;font-weight:400">NOVA R&Ecirc;VE</div>
-  <div class="byline"><span>Managed by Cluo</span></div>
+  <div class="right">
+    <a class="siteline" href="https://novareve.com.au" target="_blank" rel="noopener"><span class="long">novareve.com.au</span> &nearr;</a>
+    <div class="topdiv"></div>
+    <div class="byline"><span>Managed by Cluo</span></div>
+  </div>
 </div></div>
 
 <div class="hero"><div class="wrap">
@@ -123,11 +145,45 @@ footer a:hover{color:#fff}
   <section>
     <h2>Where to find things</h2>
     <div class="tiles">
-      <a class="tile" href="https://agencystats.co" target="_blank" rel="noopener"><div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div><div class="badge" style="background:#E2ECFB;color:#1D6FE0"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><rect x="5" y="12" width="3.6" height="8" rx="1.2"/><rect x="10.2" y="7" width="3.6" height="13" rx="1.2"/><rect x="15.4" y="14" width="3.6" height="6" rx="1.2"/><path d="M5 6l5-3 5 4 5-4"/></svg></div><h3>Your live stats</h3><p>Rankings, traffic and AI visibility</p></a>
-      <a class="tile" href="https://drive.google.com/drive/folders/1jhqfLtJsBi8o0WEYU1Bzr_2MYcuJdllY" target="_blank" rel="noopener"><div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div><div class="badge" style="background:#ECE8FA;color:#6C4BD8"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></div><h3>Your reports</h3><p>Monthly and quarterly reports</p></a>
-      <a class="tile" href="https://drive.google.com/drive/folders/1Qu62MtY13nqZwgP__3TWPtuR4urQlsWA" target="_blank" rel="noopener"><div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div><div class="badge" style="background:#E0F0EF;color:#0E8F86"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><circle cx="8.5" cy="14.5" r="1.2"/><circle cx="12" cy="14.5" r="1.2"/><circle cx="15.5" cy="14.5" r="1.2"/></svg></div><h3>Weekly updates</h3><p>A short update every week</p></a>
-      <a class="tile" href="https://novareve.com.au" target="_blank" rel="noopener"><div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div><div class="badge" style="background:#F6EDDA;color:#8A6A2E"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></div><h3>Your website</h3><p>novareve.com.au</p></a>
-      <a class="tile" href="mailto:karl@cluo.au" target="_blank" rel="noopener"><div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div><div class="badge" style="background:#F8E7EC;color:#C7466B"><svg class="ic" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a7.5 7.5 0 0 1-7.5 7.5H9l-4.5 3v-4.4A7.5 7.5 0 0 1 3 11.5 7.5 7.5 0 0 1 10.5 4h3A7.5 7.5 0 0 1 21 11.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></svg></div><h3>Talk to us</h3><p>karl@cluo.au</p></a>
+      <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <div class="txt">
+          <div class="badge"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="rgba(255,255,255,.1)"/><path d="M11 30h22" stroke="#CAA878" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="21" width="5" height="9" rx="1.4" fill="#CAA878"/><rect x="20" y="15" width="5" height="15" rx="1.4" fill="#E7C793"/><rect x="27" y="24" width="5" height="6" rx="1.4" fill="#8A6A2E"/></svg></div>
+          <h3>Your live stats</h3>
+          <p>Rankings, traffic and AI visibility</p>
+        </div>
+        <img class="stats-char" src="https://bmhxtjadxftqmgkjlgei.supabase.co/storage/v1/object/public/client-assets/characters/nova-reve.png" alt="">
+      </a>
+      <a class="tile" href="https://drive.google.com/drive/folders/1jhqfLtJsBi8o0WEYU1Bzr_2MYcuJdllY" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+          <rect x="4" y="3" width="28" height="34" rx="4" fill="#ECE8FA"/>
+          <path d="M24 3v9h9" fill="#D9CFF3"/>
+          <rect x="9" y="21" width="6" height="4" rx="1" fill="#6C4BD8"/>
+          <rect x="17" y="17" width="6" height="8" rx="1" fill="#9C86E6"/>
+          <rect x="9" y="27" width="14" height="2.4" rx="1.2" fill="#C7BCEE"/>
+          <circle cx="33" cy="33" r="8" fill="#0E8F86"/>
+          <path d="M29.5 33.2l2.4 2.4 4.6-4.9" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Your reports</h3>
+        <p>Monthly and quarterly reports</p>
+      </a>
+      <a class="tile" href="https://drive.google.com/drive/folders/1Qu62MtY13nqZwgP__3TWPtuR4urQlsWA" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+          <rect x="3" y="6" width="32" height="28" rx="4" fill="#E0F0EF"/>
+          <rect x="3" y="6" width="32" height="8" rx="4" fill="#0E8F86"/>
+          <rect x="10" y="2" width="3" height="8" rx="1.5" fill="#8A6A2E"/>
+          <rect x="25" y="2" width="3" height="8" rx="1.5" fill="#8A6A2E"/>
+          <circle cx="13" cy="24" r="2.6" fill="#0E8F86"/>
+          <circle cx="22" cy="24" r="2.6" fill="#CAA878"/>
+          <circle cx="13" cy="30" r="2.6" fill="#CAA878"/>
+          <circle cx="29" cy="19" r="7" fill="#C7466B"/>
+          <path d="M26 19l2 2 4-4" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Weekly updates</h3>
+        <p>A short update every week</p>
+      </a>
     </div>
   </section>
 </div>
@@ -160,6 +216,7 @@ footer a:hover{color:#fff}
         <p class="sidehead">Where you stand</p>
         <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><div><p class="it">Holding #2 on Google</p><p class="ib">For "Nova Reve" and "Nova Reve Castle Hill", your two brand terms.</p></div></div>
         <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9"/></svg><div><p class="it">Got a new press mention or update?</p><p class="ib">Send it our way and we'll get it indexed and cited too.</p></div></div>
+        <a class="bookbtn" href="https://calendar.app.google/gmyi8Kmc6uRQMJqt9" target="_blank" rel="noopener">Book a call &rarr;</a>
       </div>
     </div>
   </section>
