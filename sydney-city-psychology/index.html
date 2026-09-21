@@ -27,7 +27,8 @@ a{color:inherit;text-decoration:none}
 .topdiv{width:1px;height:13px;background:rgba(255,255,255,.16)}
 .byline{display:flex;align-items:center;gap:9px}
 .byline span{color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
-.cluobadge{display:flex;align-items:center;background:rgba(255,255,255,.08);border-radius:8px;padding:5px 9px;color:#fff;font-size:11px;font-weight:700;letter-spacing:.02em}
+.cluobadge{display:flex;align-items:center;background:rgba(255,255,255,.08);border-radius:8px;padding:5px 9px}
+.cluobadge img{height:12px;width:auto;display:block}
 
 .hero{background:#fff;border-bottom:1px solid #E4E6E9}
 .hero .wrap{display:flex;align-items:center;gap:36px}
@@ -41,7 +42,7 @@ section{padding:34px 0}
 h2{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;
  font-weight:600;margin:0 0 20px}
 
-.tiles{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:14px;align-items:stretch}
+.tiles{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:14px;align-items:stretch}
 .tile{position:relative;background:#fff;border:1px solid #E4E6E9;border-radius:14px;
  padding:22px 20px 20px;display:block;overflow:hidden;transition:border-color .15s,transform .15s,box-shadow .15s}
 .tile:hover{border-color:#99B594;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
@@ -121,11 +122,11 @@ footer a:hover{color:#fff}
 <body>
 
 <div class="topbar"><div class="wrap">
-  <div class="client-text">Sydney City Psychology</div>
+  <img class="client" src="scp-logo.png" alt="Sydney City Psychology">
   <div class="right">
     <a class="siteline" href="https://sydneycitypsychology.com.au" target="_blank" rel="noopener"><span class="long">sydneycitypsychology.com.au</span> &nearr;</a>
     <div class="topdiv"></div>
-    <div class="byline"><span>Managed by</span><div class="cluobadge">Cluo</div></div>
+    <div class="byline"><span>Managed by</span><div class="cluobadge"><img src="cluo-white.png" alt="Cluo"></div></div>
   </div>
 </div></div>
 
@@ -177,6 +178,17 @@ footer a:hover{color:#fff}
         <h3>Weekly updates</h3>
         <p>A short update every Monday</p>
       </a>
+      <a class="tile" href="https://drive.google.com/drive/folders/11meNWj4xmrt0W8ROQdfZ03hov3vgkYil" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M11 3h22v38l-4-3-4 3-3-3-3 3-4-3-4 3V3z" fill="#FBF3DE"/>
+          <path d="M16 14h12M16 20h12M16 26h8" stroke="#B98A1C" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="30" cy="30" r="8" fill="#C3921A"/>
+          <path d="M26.5 30l2.3 2.3 4.2-4.6" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Invoices</h3>
+        <p>Billing and receipts</p>
+      </a>
     </div>
   </section>
 </div>
@@ -213,6 +225,7 @@ footer a:hover{color:#fff}
     </div>
   </section>
 </div>
+<img class="banner" src="footer-banner.svg" alt="" aria-hidden="true">
 </div>
 
 <footer>
