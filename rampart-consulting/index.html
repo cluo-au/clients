@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Rampart Consulting &middot; Your Cluo hub</title>
+<meta property="og:title" content="Rampart Consulting &middot; Your Cluo hub">
+<meta property="og:description" content="Your reports, stats and updates, all in one place.">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#F7F7F5;color:#2B2F36;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.topbar{background:#1A2E5A;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar .client{height:30px;width:auto;display:block}
+.topbar .right{display:flex;align-items:center;gap:14px}
+.siteline{color:rgba(255,255,255,.62);font-size:12.5px;letter-spacing:.01em;display:flex;align-items:center;gap:5px;transition:color .15s}
+.siteline:hover{color:#005E99}
+.topdiv{width:1px;height:13px;background:rgba(255,255,255,.16)}
+.byline{display:flex;align-items:center;gap:9px}
+.byline span{color:rgba(255,255,255,.5);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+
+.hero{background:#fff;border-bottom:1px solid #E4E6E9}
+.hero .wrap{padding:50px 0}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;margin:0 0 12px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:42px;line-height:1.1;
+ margin:0;color:#1A2E5A;letter-spacing:-.015em}
+.rule{width:56px;height:4px;background:#005E99;margin:22px 0 0;border-radius:2px}
+
+section{padding:34px 0}
+h2{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;
+ font-weight:600;margin:0 0 20px}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile{position:relative;background:#fff;border:1px solid #E4E6E9;border-radius:14px;
+ padding:22px 20px 20px;display:block;overflow:hidden;transition:border-color .15s,transform .15s,box-shadow .15s}
+.tile:hover{border-color:#005E99;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.tile h3{font-size:16.5px;font-weight:600;margin:0 0 3px;color:#1A2E5A;letter-spacing:-.01em}
+.tile p{font-size:13.5px;color:#868D96;margin:0;line-height:1.4}
+.tile .go{position:absolute;top:22px;right:20px;color:#B7BDC7;transition:color .15s}
+.tile:hover .go{color:#1A2E5A}
+
+.tile-stats{background:linear-gradient(135deg,#1A2E5A 0%,#264785 100%);border-color:#264785}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.6)}
+.tile-stats .go{color:rgba(255,255,255,.45)}
+.tile-stats:hover .go{color:#005E99}
+.tile-stats .badge{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.1);
+ display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+.badge{width:44px;height:44px;border-radius:12px;display:block;margin-bottom:14px}
+
+.two{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:start}
+.panel{background:#fff;border:1px solid #E4E6E9;border-radius:14px;padding:6px 22px}
+.item{display:flex;gap:15px;padding:17px 0;border-top:1px solid #E4E6E9}
+.item:first-child{border-top:0}
+.item .ic{flex:none;margin-top:1px}
+.item .it{font-size:15.5px;font-weight:600;color:#1A2E5A;margin:0 0 2px}
+.item .ib{font-size:13.5px;color:#4A5058;margin:0;line-height:1.5}
+.side{background:#1A2E5A;border-radius:14px;padding:2px 22px 22px;color:#fff}
+.side .item{border-top:1px solid rgba(255,255,255,.14)}
+.side .item .ic{color:#005E99}
+.side .it{color:#fff}
+.side .ib{color:rgba(255,255,255,.72)}
+.sidehead{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#005E99;
+ font-weight:600;margin:0;padding:22px 0 2px}
+.bookbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#005E99;
+ color:#fff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px}
+.bookbtn:hover{background:#0072B8}
+
+footer{background:#1A2E5A;color:rgba(255,255,255,.62);padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;
+ flex-wrap:wrap;font-size:13px}
+footer .fbar{height:4px;background:#005E99}
+footer a{color:rgba(255,255,255,.85)}
+footer a:hover{color:#fff}
+
+@media(max-width:880px){
+ .tiles{grid-template-columns:1fr 1fr}
+ .tile-stats{grid-column:1/-1}
+ .two{grid-template-columns:1fr}
+ h1{font-size:32px}
+}
+@media(max-width:620px){
+ .tiles{grid-template-columns:1fr}
+ .tile-stats{grid-column:auto}
+ .topbar .siteline span.long{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <img class="client" src="logo.png" alt="Rampart Consulting">
+  <div class="right">
+    <a class="siteline" href="https://rampart.com.au" target="_blank" rel="noopener"><span class="long">rampart.com.au</span> &nearr;</a>
+    <div class="topdiv"></div>
+    <div class="byline"><span>Managed by Cluo</span></div>
+  </div>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">Your Cluo hub</p>
+  <h1>Your SEO and AI visibility.</h1>
+  <div class="rule"></div>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <h2>Where to find things</h2>
+    <div class="tiles">
+      <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <div class="badge"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="rgba(255,255,255,.1)"/><path d="M11 30h22" stroke="#005E99" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="21" width="5" height="9" rx="1.4" fill="#005E99"/><rect x="20" y="15" width="5" height="15" rx="1.4" fill="#3D82C4"/><rect x="27" y="24" width="5" height="6" rx="1.4" fill="#7FB0DD"/></svg></div>
+        <h3>Your live stats</h3>
+        <p>Rankings, traffic and AI visibility</p>
+      </a>
+      <a class="tile" href="https://drive.google.com/drive/folders/1aPx2o0zVSz-Qojm-bKP--gDgjO6qUncC" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+          <rect x="4" y="3" width="28" height="34" rx="4" fill="#ECE8FA"/>
+          <path d="M24 3v9h9" fill="#D9CFF3"/>
+          <rect x="9" y="21" width="6" height="4" rx="1" fill="#6C4BD8"/>
+          <rect x="17" y="17" width="6" height="8" rx="1" fill="#9C86E6"/>
+          <rect x="9" y="27" width="14" height="2.4" rx="1.2" fill="#C7BCEE"/>
+          <circle cx="33" cy="33" r="8" fill="#0E8F86"/>
+          <path d="M29.5 33.2l2.4 2.4 4.6-4.9" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Your reports</h3>
+        <p>Landing here as they're built</p>
+      </a>
+      <a class="tile" href="https://drive.google.com/drive/folders/1aPx2o0zVSz-Qojm-bKP--gDgjO6qUncC" target="_blank" rel="noopener">
+        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
+        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+          <rect x="3" y="6" width="32" height="28" rx="4" fill="#E0F0EF"/>
+          <rect x="3" y="6" width="32" height="8" rx="4" fill="#0E8F86"/>
+          <rect x="10" y="2" width="3" height="8" rx="1.5" fill="#005E99"/>
+          <rect x="25" y="2" width="3" height="8" rx="1.5" fill="#005E99"/>
+          <circle cx="13" cy="24" r="2.6" fill="#0E8F86"/>
+          <circle cx="22" cy="24" r="2.6" fill="#005E99"/>
+          <circle cx="13" cy="30" r="2.6" fill="#005E99"/>
+          <circle cx="29" cy="19" r="7" fill="#C7466B"/>
+          <path d="M26 19l2 2 4-4" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>Weekly updates</h3>
+        <p>A short update every week</p>
+      </a>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="two">
+      <div>
+        <h2>What we're working on</h2>
+        <div class="panel">
+          <div class="item"><span style="color:#1D6FE0;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3c2.5 2.7 4 6 4 9s-1.5 6.3-4 9c-2.5-2.7-4-6-4-9s1.5-6.3 4-9z"/></svg></span><div><p class="it">Moving you onto rampart.com.au</p><p class="ib">Migrating the site off the old domain, coordinating the registrar and the hosting so nothing drops.</p></div></div>
+          <div class="item"><span style="color:#6C4BD8;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg></span><div><p class="it">Getting measurement in place</p><p class="ib">Checking what tracking is already on the site, then connecting Analytics and Search Console properly.</p></div></div>
+          <div class="item"><span style="color:#0E8F86;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div><p class="it">Your SEO plan</p><p class="ib">A first plan built around the corporate services you actually want to be found for.</p></div></div>
+          <div class="item"><span style="color:#C7466B;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4v3a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6"/></svg></span><div><p class="it">Getting you set up on Claude</p><p class="ib">A walkthrough of using it day to day in the business. Included in your monthly.</p></div></div>
+        </div>
+      </div>
+      <div class="side">
+        <p class="sidehead">What we need from you</p>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9"/></svg><div><p class="it">The domain login</p><p class="ib">The registrar login for rampart.com.au, so the move can start.</p></div></div>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9"/></svg><div><p class="it">An introduction to your hosting and site people</p><p class="ib">So we can coordinate the migration with them rather than around them.</p></div></div>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9"/></svg><div><p class="it">The old website logins</p><p class="ib">Dropping the inactive accounts to read-only, so only current people hold access.</p></div></div>
+        <a class="bookbtn" href="https://calendar.app.google/gmyi8Kmc6uRQMJqt9" target="_blank" rel="noopener">Book a call &rarr;</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>Rampart Consulting</div>
+    <div><a href="mailto:karl@cluo.au">karl@cluo.au</a> &nbsp;&middot;&nbsp; <a href="https://cluo.au" target="_blank" rel="noopener">cluo.au</a></div>
+  </div>
+</footer>
+<div class="fbar" style="height:4px;background:#005E99"></div>
+
+</body>
+</html>
