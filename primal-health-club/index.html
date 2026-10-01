@@ -99,6 +99,13 @@ footer .fbar{height:4px;background:#A62335}
 footer a{color:rgba(255,255,255,.85)}
 footer a:hover{color:#fff}
 
+.rtn{display:flex;align-items:center;gap:9px;margin-bottom:16px}
+.rtn-mark{width:30px;height:30px;border-radius:9px;background:#4ED4BD;color:#031011;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center}
+.rtn-word{color:#fff;font-weight:700;font-size:17px;letter-spacing:-.01em}
+.rtn-live{display:inline-flex;align-items:center;gap:5px;margin-left:2px;padding:3px 9px;border-radius:999px;background:rgba(78,212,189,.14);color:#4ED4BD;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.rtn-live i{width:6px;height:6px;border-radius:50%;background:#4ED4BD;box-shadow:0 0 0 0 rgba(78,212,189,.6);animation:rp 1.8s infinite}
+@keyframes rp{0%{box-shadow:0 0 0 0 rgba(78,212,189,.55)}70%{box-shadow:0 0 0 7px rgba(78,212,189,0)}100%{box-shadow:0 0 0 0 rgba(78,212,189,0)}}
+.tile-stats:hover .rtn-word{color:#4ED4BD}
 @media(max-width:880px){
  .tiles{grid-template-columns:1fr 1fr}
  .tile-stats{grid-column:1/-1}
@@ -145,11 +152,11 @@ footer a:hover{color:#fff}
     <div class="tiles">
       <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
         <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
-        <div class="badge"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="rgba(255,255,255,.1)"/><path d="M11 30h22" stroke="#A62335" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="21" width="5" height="9" rx="1.4" fill="#A62335"/><rect x="20" y="15" width="5" height="15" rx="1.4" fill="#E7C793"/><rect x="27" y="24" width="5" height="6" rx="1.4" fill="#8A6A2E"/></svg></div>
-        <h3>Your live stats</h3>
-        <p>Rankings, traffic and AI visibility</p>
+        <div class="rtn"><span class="rtn-mark">R</span><span class="rtn-word">Retentn</span><span class="rtn-live"><i></i>Live</span></div>
+        <h3>Your live dashboard</h3>
+        <p>Live rankings, traffic and AI visibility. Log in anytime.</p>
       </a>
-      <a class="tile" href="https://drive.google.com/drive/folders/1bAnNhWdWWTkQiNynYN27kkjFlroFvtT3" target="_blank" rel="noopener">
+      <a class="tile" href="https://drive.google.com/drive/folders/1Q1vSUkkMnO2nIpdmUtETKPJl4qg-6CcH" target="_blank" rel="noopener">
         <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
         <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
           <rect x="4" y="3" width="28" height="34" rx="4" fill="#ECE8FA"/>
@@ -160,10 +167,10 @@ footer a:hover{color:#fff}
           <circle cx="33" cy="33" r="8" fill="#0E8F86"/>
           <path d="M29.5 33.2l2.4 2.4 4.6-4.9" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <h3>Your reports</h3>
-        <p>Monthly reports and your quarter plan</p>
+        <h3>Monthly reports</h3>
+        <p>Your 30-day and mid-month reports, plus your quarter plan</p>
       </a>
-      <a class="tile" href="https://drive.google.com/drive/folders/1bAnNhWdWWTkQiNynYN27kkjFlroFvtT3" target="_blank" rel="noopener">
+      <a class="tile" href="https://drive.google.com/drive/folders/1gtyrScFrZwA9CsRY-Fj4po8fSc5z9U74" target="_blank" rel="noopener">
         <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
         <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
           <rect x="3" y="6" width="32" height="28" rx="4" fill="#E0F0EF"/>
@@ -177,7 +184,7 @@ footer a:hover{color:#fff}
           <path d="M26 19l2 2 4-4" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <h3>Weekly updates</h3>
-        <p>A short update every week</p>
+        <p>A quick one-page check-in every Monday</p>
       </a>
     </div>
   </section>
@@ -189,7 +196,7 @@ footer a:hover{color:#fff}
     <div class="rows">
       <a class="row" href="https://drive.google.com/file/d/1QxCpXYfQpN3UmBxStfDHY65mZTESI6fQ/view?usp=drivesdk" target="_blank" rel="noopener"><span style="color:#6C4BD8;display:flex;flex:none"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div class="rmain"><div class="rt">Your First Quarter</div><div class="rs"></div></div><div class="rd">30 Sep 2026</div></a>
       <a class="row" href="https://drive.google.com/file/d/1JXuZcWCKtcIjJTz1wZUAPStaLVB1sfWp/view?usp=drivesdk" target="_blank" rel="noopener"><span style="color:#6C4BD8;display:flex;flex:none"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div class="rmain"><div class="rt">Welcome Pack</div><div class="rs"></div></div><div class="rd">27 Sep 2026</div></a>
-      <a class="allrow" href="https://drive.google.com/drive/folders/1bAnNhWdWWTkQiNynYN27kkjFlroFvtT3" target="_blank" rel="noopener">All reports <svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></a>
+      <a class="allrow" href="https://drive.google.com/drive/folders/1Q1vSUkkMnO2nIpdmUtETKPJl4qg-6CcH" target="_blank" rel="noopener">All monthly reports <svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></a>
     </div>
   </section>
 </div></div>
