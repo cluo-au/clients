@@ -92,6 +92,32 @@ footer a:hover{color:#fff}
  .tile-stats{grid-column:auto}
  .topbar .siteline span.long{display:none}
 }
+.band{background:#F1FAF8;border-top:1px solid #D6F1EB;border-bottom:1px solid #D6F1EB}
+.rows{background:#fff;border:1px solid #E4E6E9;border-radius:14px;overflow:hidden}
+.row{display:flex;align-items:center;gap:17px;border-top:1px solid #E4E6E9}
+.row:first-child{border-top:0}
+.row .rmain{flex:1;min-width:0}
+.row .rt{font-size:15.5px;font-weight:600}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile-stats{background:linear-gradient(135deg,#123A32 0%,#254A42 100%);border-color:#254A42}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.66)}
+.dash{margin:0 0 16px;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.dash svg{display:block}
+.tile-stats .go{display:none}
+.row{padding:14px 22px}
+.rthumb{flex:none;display:flex;filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));transition:transform .15s}
+a.row:hover .rthumb{transform:translateY(-2px) rotate(-2deg)}
+.rtag{display:inline-block;margin-top:5px;padding:2px 9px;border-radius:999px;background:#E2F5F1;color:#217863;font-size:11.5px;font-weight:600;letter-spacing:.02em}
+.row .rd{background:#F1F1EE;color:#4A5058;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:500;flex:none;white-space:nowrap}
+.rgo{flex:none;color:#B7BDC7;display:flex;transition:color .15s,transform .15s}
+a.row:hover .rgo{color:#33B999;transform:translateX(3px)}
+.allbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#33B999;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;transition:filter .15s}
+.allbtn:hover{filter:brightness(1.1)}
+.fbanner{display:block;width:100%;height:auto;margin-top:0}
+@media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tile-stats{grid-column:auto}}
+@media(max-width:620px){.tiles{grid-template-columns:1fr}.row .rd{display:inline-block}.rgo{display:none}}
 </style>
 </head>
 <body>
@@ -116,44 +142,33 @@ footer a:hover{color:#fff}
     <h2>Where to find things</h2>
     <div class="tiles">
       <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
-        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
-        <div class="badge"><svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect x="2" y="2" width="40" height="40" rx="12" fill="rgba(255,255,255,.1)"/><path d="M11 30h22" stroke="#33B999" stroke-width="1.6" stroke-linecap="round"/><rect x="13" y="21" width="5" height="9" rx="1.4" fill="#33B999"/><rect x="20" y="15" width="5" height="15" rx="1.4" fill="#63CBB0"/><rect x="27" y="24" width="5" height="6" rx="1.4" fill="#A6E4D3"/></svg></div>
-        <h3>Your live stats</h3>
-        <p>Rankings, traffic and ad performance</p>
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="10" fill="#FAFAF8"/><rect x="0" y="0" width="300" height="20" rx="10" fill="#ECECE8"/><rect x="0" y="12" width="300" height="8" fill="#ECECE8"/><circle cx="12" cy="10" r="3" fill="#E36B5D"/><circle cx="22" cy="10" r="3" fill="#E5B84B"/><circle cx="32" cy="10" r="3" fill="#5DBB74"/><rect x="110" y="6" width="80" height="8" rx="4" fill="#fff"/><rect x="12" y="30" width="52" height="7" rx="3.5" fill="#D9DCDF"/><rect x="12" y="42" width="34" height="11" rx="3" fill="#2B2F36"/><rect x="72" y="30" width="44" height="7" rx="3.5" fill="#D9DCDF"/><rect x="72" y="42" width="28" height="11" rx="3" fill="#2B2F36"/><path d="M12 106 L12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44 L206 106 Z" fill="#22B8CF" opacity=".16"/><path d="M12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44" fill="none" stroke="#22B8CF" stroke-width="2.4" stroke-linecap="round"/><circle cx="206" cy="44" r="3.6" fill="#22B8CF" stroke="#fff" stroke-width="1.6"/><rect x="222" y="30" width="66" height="76" rx="7" fill="#fff" stroke="#ECECE8"/><rect x="230" y="38" width="30" height="5" rx="2.5" fill="#D9DCDF"/><rect x="230" y="52" width="48" height="6" rx="3" fill="#33B999"/><rect x="230" y="64" width="38" height="6" rx="3" fill="#85D5C2"/><rect x="230" y="76" width="28" height="6" rx="3" fill="#C2EAE0"/><rect x="230" y="88" width="18" height="6" rx="3" fill="#DAF2ED"/></svg></div>
+        <h3>Your live dashboard</h3>
+        <p>Log in to see your traffic, rankings and AI visibility, updated live.</p>
       </a>
-      <a class="tile" href="https://drive.google.com/drive/folders/19qQGNDiYE77OfPplFf6RCVYc-SNUQDHk" target="_blank" rel="noopener">
-        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
-        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
-          <rect x="4" y="3" width="28" height="34" rx="4" fill="#ECE8FA"/>
-          <path d="M24 3v9h9" fill="#D9CFF3"/>
-          <rect x="9" y="21" width="6" height="4" rx="1" fill="#6C4BD8"/>
-          <rect x="17" y="17" width="6" height="8" rx="1" fill="#9C86E6"/>
-          <rect x="9" y="27" width="14" height="2.4" rx="1.2" fill="#C7BCEE"/>
-          <circle cx="33" cy="33" r="8" fill="#0E8F86"/>
-          <path d="M29.5 33.2l2.4 2.4 4.6-4.9" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>Your reports</h3>
-        <p>Landing here as they're built</p>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1JQmDWWqa5thyknxpmUty7LFqgb-aJPFQ" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#33564F"/><g transform="rotate(-6 92 66)"><rect x="52" y="18" width="80" height="96" rx="5" fill="#E9E9E6"/></g><rect x="104" y="12" width="92" height="104" rx="6" fill="#FAFAF8"/><rect x="104" y="12" width="92" height="20" rx="6" fill="#33B999"/><rect x="104" y="24" width="92" height="8" fill="#33B999"/><rect x="112" y="19" width="40" height="5" rx="2.5" fill="#fff" opacity=".9"/><rect x="112" y="40" width="58" height="5" rx="2.5" fill="#2B2F36"/><rect x="112" y="50" width="76" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="58" width="66" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="92" width="10" height="16" rx="2" fill="#8FD8C7"/><rect x="126" y="84" width="10" height="24" rx="2" fill="#33B999"/><rect x="140" y="76" width="10" height="32" rx="2" fill="#33B999"/><rect x="154" y="70" width="10" height="38" rx="2" fill="#268B73"/><rect x="170" y="72" width="18" height="36" rx="3" fill="#ECECE8"/><g transform="rotate(5 241 69)"><rect x="208" y="30" width="66" height="78" rx="6" fill="#FAFAF8"/><rect x="216" y="38" width="34" height="5" rx="2.5" fill="#2B2F36"/><rect x="216" y="48" width="50" height="4" rx="2" fill="#D9DCDF"/><rect x="216" y="56" width="44" height="4" rx="2" fill="#D9DCDF"/><circle cx="241" cy="84" r="14" fill="none" stroke="#ECECE8" stroke-width="6"/><path d="M241 70 A14 14 0 1 1 228 89" fill="none" stroke="#33B999" stroke-width="6" stroke-linecap="round"/></g></svg></div>
+        <h3>Monthly reports</h3>
+        <p>Your 30-day and mid-month reports, plus your quarter plan</p>
       </a>
-      <a class="tile" href="https://drive.google.com/drive/folders/19qQGNDiYE77OfPplFf6RCVYc-SNUQDHk" target="_blank" rel="noopener">
-        <div class="go"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></div>
-        <svg class="badge" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
-          <rect x="3" y="6" width="32" height="28" rx="4" fill="#E0F0EF"/>
-          <rect x="3" y="6" width="32" height="8" rx="4" fill="#0E8F86"/>
-          <rect x="10" y="2" width="3" height="8" rx="1.5" fill="#33B999"/>
-          <rect x="25" y="2" width="3" height="8" rx="1.5" fill="#33B999"/>
-          <circle cx="13" cy="24" r="2.6" fill="#0E8F86"/>
-          <circle cx="22" cy="24" r="2.6" fill="#33B999"/>
-          <circle cx="13" cy="30" r="2.6" fill="#33B999"/>
-          <circle cx="29" cy="19" r="7" fill="#C7466B"/>
-          <path d="M26 19l2 2 4-4" stroke="#fff" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1aOxy_EUrwiHkp4Tv_LlnZkMbe5N_IZD3" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#33564F"/><rect x="24" y="14" width="96" height="94" rx="7" fill="#FAFAF8"/><rect x="24" y="14" width="96" height="24" rx="7" fill="#33B999"/><rect x="24" y="28" width="96" height="10" fill="#33B999"/><rect x="44" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="95" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="56" y="22" width="32" height="6" rx="3" fill="#fff" opacity=".9"/><g fill="#E3E3DF"><rect x="34" y="46" width="14" height="12" rx="3"/><rect x="52" y="46" width="14" height="12" rx="3"/><rect x="70" y="46" width="14" height="12" rx="3"/><rect x="88" y="46" width="14" height="12" rx="3"/><rect x="52" y="62" width="14" height="12" rx="3"/><rect x="70" y="62" width="14" height="12" rx="3"/><rect x="88" y="62" width="14" height="12" rx="3"/><rect x="34" y="78" width="14" height="12" rx="3"/><rect x="52" y="78" width="14" height="12" rx="3"/><rect x="70" y="78" width="14" height="12" rx="3"/><rect x="88" y="78" width="14" height="12" rx="3"/></g><rect x="34" y="62" width="14" height="12" rx="3" fill="#33B999"/><rect x="138" y="22" width="140" height="78" rx="7" fill="#FAFAF8"/><rect x="150" y="32" width="56" height="6" rx="3" fill="#2B2F36"/><circle cx="157" cy="54" r="6" fill="#33B999"/><path d="M154 54l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="51" width="92" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="70" r="6" fill="#33B999"/><path d="M154 70l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="67" width="76" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="86" r="6" fill="none" stroke="#8FD8C7" stroke-width="2"/><rect x="170" y="83" width="64" height="5" rx="2.5" fill="#D9DCDF"/></svg></div>
         <h3>Weekly updates</h3>
-        <p>A short update every week</p>
+        <p>A quick one-page check-in every Monday</p>
       </a>
     </div>
   </section>
 </div>
+
+<div class="band"><div class="wrap">
+  <section>
+    <h2>Latest reports</h2>
+    <div class="rows">
+      <a class="row" href="https://drive.google.com/file/d/1w5ITSxsJ2Do-V8wnNTys5-aoUDEzxmCI/view?usp=drivesdk" target="_blank" rel="noopener"><span class="rthumb" aria-hidden="true"><svg viewBox="0 0 40 48" width="40" height="48"><rect x="1" y="1" width="38" height="46" rx="5" fill="#fff" stroke="#E2E2DD"/><rect x="1" y="1" width="38" height="12" rx="5" fill="#33B999"/><rect x="1" y="8" width="38" height="5" fill="#33B999"/><rect x="7" y="18" width="20" height="3" rx="1.5" fill="#2B2F36"/><rect x="7" y="24" width="26" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="29" width="22" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="38" width="4" height="5" rx="1" fill="#8FD8C7"/><rect x="13" y="35" width="4" height="8" rx="1" fill="#33B999"/><rect x="19" y="33" width="4" height="10" rx="1" fill="#268B73"/></svg></span><div class="rmain"><div class="rt">Your First Quarter</div><span class="rtag">Quarter plan</span></div><span class="rd">28 Sep 2026</span><span class="rgo"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></span></a>
+    </div>
+    <a class="allbtn" href="https://drive.google.com/drive/folders/1JQmDWWqa5thyknxpmUty7LFqgb-aJPFQ" target="_blank" rel="noopener">All monthly reports &rarr;</a>
+  </section>
+</div></div>
 
 <div class="wrap">
   <section>
