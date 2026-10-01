@@ -101,6 +101,15 @@ footer a:hover{color:#fff}
 
 .dash{margin:0 0 16px;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
 .dash svg{display:block}
+.row{padding:14px 22px}
+.rthumb{flex:none;display:flex;filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));transition:transform .15s}
+a.row:hover .rthumb{transform:translateY(-2px) rotate(-2deg)}
+.rtag{display:inline-block;margin-top:5px;padding:2px 9px;border-radius:999px;background:#F6E8EA;color:#A62335;font-size:11.5px;font-weight:600;letter-spacing:.02em}
+.row .rd{background:#F1F1EE;color:#4A5058;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:500}
+.rgo{flex:none;color:#B7BDC7;display:flex;transition:color .15s,transform .15s}
+a.row:hover .rgo{color:#A62335;transform:translateX(3px)}
+.allbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#A62335;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;transition:background .15s}
+.allbtn:hover{background:#C2394D}
 @media(max-width:880px){
  .tiles{grid-template-columns:1fr 1fr}
  .tile-stats{grid-column:1/-1}
@@ -212,10 +221,10 @@ footer a:hover{color:#fff}
   <section>
     <h2>Latest reports</h2>
     <div class="rows">
-      <a class="row" href="https://drive.google.com/file/d/1QxCpXYfQpN3UmBxStfDHY65mZTESI6fQ/view?usp=drivesdk" target="_blank" rel="noopener"><span style="color:#6C4BD8;display:flex;flex:none"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div class="rmain"><div class="rt">Your First Quarter</div><div class="rs"></div></div><div class="rd">30 Sep 2026</div></a>
-      <a class="row" href="https://drive.google.com/file/d/1JXuZcWCKtcIjJTz1wZUAPStaLVB1sfWp/view?usp=drivesdk" target="_blank" rel="noopener"><span style="color:#6C4BD8;display:flex;flex:none"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div class="rmain"><div class="rt">Welcome Pack</div><div class="rs"></div></div><div class="rd">27 Sep 2026</div></a>
-      <a class="allrow" href="https://drive.google.com/drive/folders/1Q1vSUkkMnO2nIpdmUtETKPJl4qg-6CcH" target="_blank" rel="noopener">All monthly reports <svg class="ic" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></a>
+      <a class="row" href="https://drive.google.com/file/d/1QxCpXYfQpN3UmBxStfDHY65mZTESI6fQ/view?usp=drivesdk" target="_blank" rel="noopener"><span class="rthumb" aria-hidden="true"><svg viewBox="0 0 40 48" width="40" height="48"><rect x="1" y="1" width="38" height="46" rx="5" fill="#fff" stroke="#E2E2DD"/><rect x="1" y="1" width="38" height="12" rx="5" fill="#A62335"/><rect x="1" y="8" width="38" height="5" fill="#A62335"/><rect x="7" y="18" width="20" height="3" rx="1.5" fill="#2B2F36"/><rect x="7" y="24" width="26" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="29" width="22" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="38" width="4" height="5" rx="1" fill="#C9888F"/><rect x="13" y="35" width="4" height="8" rx="1" fill="#A62335"/><rect x="19" y="33" width="4" height="10" rx="1" fill="#7E1A28"/></svg></span><div class="rmain"><div class="rt">Your First Quarter</div><span class="rtag">Quarter plan</span></div><span class="rd">30 Sep 2026</span><span class="rgo"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></span></a>
+      <a class="row" href="https://drive.google.com/file/d/1JXuZcWCKtcIjJTz1wZUAPStaLVB1sfWp/view?usp=drivesdk" target="_blank" rel="noopener"><span class="rthumb" aria-hidden="true"><svg viewBox="0 0 40 48" width="40" height="48"><rect x="1" y="1" width="38" height="46" rx="5" fill="#fff" stroke="#E2E2DD"/><rect x="1" y="1" width="38" height="12" rx="5" fill="#A62335"/><rect x="1" y="8" width="38" height="5" fill="#A62335"/><rect x="7" y="18" width="20" height="3" rx="1.5" fill="#2B2F36"/><rect x="7" y="24" width="26" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="29" width="22" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="38" width="4" height="5" rx="1" fill="#C9888F"/><rect x="13" y="35" width="4" height="8" rx="1" fill="#A62335"/><rect x="19" y="33" width="4" height="10" rx="1" fill="#7E1A28"/></svg></span><div class="rmain"><div class="rt">Welcome Pack</div><span class="rtag">Getting started</span></div><span class="rd">27 Sep 2026</span><span class="rgo"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></span></a>
     </div>
+    <a class="allbtn" href="https://drive.google.com/drive/folders/1Q1vSUkkMnO2nIpdmUtETKPJl4qg-6CcH" target="_blank" rel="noopener">All monthly reports &rarr;</a>
   </section>
 </div></div>
 
