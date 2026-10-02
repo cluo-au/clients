@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sgraffito &middot; Your Cluo hub</title>
+<meta property="og:title" content="Sgraffito &middot; Your Cluo hub">
+<meta property="og:description" content="Your reports, stats and updates, all in one place.">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#F7F4EE;color:#2B2F36;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.topbar{background:#fff;padding:13px 0;border-bottom:1px solid #E4E6E9}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar .right{display:flex;align-items:center;gap:14px}
+.siteline{color:rgba(0,0,0,.55);font-size:12.5px;letter-spacing:.01em;display:flex;align-items:center;gap:5px;transition:color .15s}
+.siteline:hover{color:#C01830}
+.topdiv{width:1px;height:13px;background:rgba(0,0,0,.14)}
+.byline{display:flex;align-items:center;gap:9px}
+.byline span{color:rgba(0,0,0,.55);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+
+.hero{background:#fff;border-bottom:1px solid #E4E6E9}
+.hero .wrap{display:flex;align-items:center;gap:36px}
+.hero-copy{flex:1;padding:50px 0;min-width:0}
+.hero-char{flex:none;align-self:flex-end}
+.hero-char img{height:260px;width:auto;display:block}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;margin:0 0 12px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:42px;line-height:1.1;
+ margin:0;color:#161616;letter-spacing:-.015em}
+.rule{width:56px;height:4px;background:#C01830;margin:22px 0 0;border-radius:2px}
+
+section{padding:34px 0}
+h2{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;
+ font-weight:600;margin:0 0 20px}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile{position:relative;background:#fff;border:1px solid #E4E6E9;border-radius:14px;
+ padding:22px 20px 20px;display:block;overflow:hidden;transition:border-color .15s,transform .15s,box-shadow .15s}
+.tile:hover{border-color:#C01830;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.tile h3{font-size:16.5px;font-weight:600;margin:0 0 3px;color:#161616;letter-spacing:-.01em}
+.tile p{font-size:13.5px;color:#868D96;margin:0;line-height:1.4}
+.tile .go{position:absolute;top:22px;right:20px;color:#B7BDC7;transition:color .15s}
+.tile:hover .go{color:#161616}
+
+.tile-stats{background:linear-gradient(135deg,#161616 0%,#292929 100%);border-color:#292929}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.6)}
+.tile-stats .go{color:rgba(255,255,255,.45)}
+.tile-stats:hover .go{color:#C01830}
+.tile-stats .badge{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.1);
+ display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+.badge{width:44px;height:44px;border-radius:12px;display:block;margin-bottom:14px}
+
+.two{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:start}
+.panel{background:#fff;border:1px solid #E4E6E9;border-radius:14px;padding:6px 22px}
+.item{display:flex;gap:15px;padding:17px 0;border-top:1px solid #E4E6E9}
+.item:first-child{border-top:0}
+.item .ic{flex:none;margin-top:1px}
+.item .it{font-size:15.5px;font-weight:600;color:#161616;margin:0 0 2px}
+.item .ib{font-size:13.5px;color:#4A5058;margin:0;line-height:1.5}
+.side{background:#161616;border-radius:14px;padding:2px 22px 22px;color:#fff}
+.side .item{border-top:1px solid rgba(255,255,255,.14)}
+.side .item .ic{color:#C01830}
+.side .it{color:#fff}
+.side .ib{color:rgba(255,255,255,.72)}
+.sidehead{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#C01830;
+ font-weight:600;margin:0;padding:22px 0 2px}
+.bookbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#C01830;
+ color:#fff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px}
+.bookbtn:hover{background:#D63A50}
+
+footer{background:#161616;color:rgba(255,255,255,.62);padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;
+ flex-wrap:wrap;font-size:13px}
+footer .fbar{height:4px;background:#C01830}
+footer a{color:rgba(255,255,255,.85)}
+footer a:hover{color:#fff}
+
+@media(max-width:880px){
+ .hero .wrap{gap:22px}
+ .hero-char img{height:220px}
+ .tiles{grid-template-columns:1fr 1fr}
+ .tile-stats{grid-column:1/-1}
+ .two{grid-template-columns:1fr}
+ h1{font-size:32px}
+}
+@media(max-width:620px){
+ .hero .wrap{flex-direction:column-reverse;align-items:flex-start;padding-top:30px}
+ .hero-copy{padding:20px 0 34px}
+ .hero-char{align-self:flex-start}
+ .hero-char img{height:170px}
+ .tiles{grid-template-columns:1fr}
+ .tile-stats{grid-column:auto}
+ .topbar .siteline span.long{display:none}
+}
+.band{background:#FBEFF0;border-top:1px solid #F3D2D7;border-bottom:1px solid #F3D2D7}
+.rows{background:#fff;border:1px solid #E4E6E9;border-radius:14px;overflow:hidden}
+.row{display:flex;align-items:center;gap:17px;border-top:1px solid #E4E6E9}
+.row:first-child{border-top:0}
+.row .rmain{flex:1;min-width:0}
+.row .rt{font-size:15.5px;font-weight:600}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile-stats{background:linear-gradient(135deg,#161616 0%,#292929 100%);border-color:#292929}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.66)}
+.dash{margin:0 0 16px;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.dash svg{display:block}
+.tile-stats .go{display:none}
+.row{padding:14px 22px}
+.rthumb{flex:none;display:flex;filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));transition:transform .15s}
+a.row:hover .rthumb{transform:translateY(-2px) rotate(-2deg)}
+.rtag{display:inline-block;margin-top:5px;padding:2px 9px;border-radius:999px;background:#F8DDE1;color:#8E1224;font-size:11.5px;font-weight:600;letter-spacing:.02em}
+.row .rd{background:#F1F1EE;color:#4A5058;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:500;flex:none;white-space:nowrap}
+.rgo{flex:none;color:#B7BDC7;display:flex;transition:color .15s,transform .15s}
+a.row:hover .rgo{color:#C01830;transform:translateX(3px)}
+.allbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#C01830;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;transition:filter .15s}
+.allbtn:hover{filter:brightness(1.1)}
+.fbanner{display:block;width:100%;height:auto;margin-top:0}
+@media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tile-stats{grid-column:auto}}
+@media(max-width:620px){.topbar img.client{height:32px!important}.tiles{grid-template-columns:1fr}.row .rd{display:inline-block}.rgo{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <img class="client" src="sgraffito-logo.png" alt="Sgraffito Picture Framers" style="height:44px;width:auto;display:block">
+  <div class="right">
+    <a class="siteline" href="https://sgraffito.co.nz" target="_blank" rel="noopener"><span class="long">sgraffito.co.nz</span> &nearr;</a>
+    <div class="topdiv"></div>
+    <div class="byline"><span>Managed by Cluo</span></div>
+  </div>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="hero-copy">
+  <p class="eyebrow">Your Cluo hub</p>
+  <h1>Your website, Google Ads and local listings.</h1>
+  <div class="rule"></div>
+  </div>
+  <div class="hero-char"><img src="sgraffito-character.png" alt="Stu, Sgraffito"></div>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <h2>Where to find things</h2>
+    <div class="tiles">
+      <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="10" fill="#FAFAF8"/><rect x="0" y="0" width="300" height="20" rx="10" fill="#ECECE8"/><rect x="0" y="12" width="300" height="8" fill="#ECECE8"/><circle cx="12" cy="10" r="3" fill="#E36B5D"/><circle cx="22" cy="10" r="3" fill="#E5B84B"/><circle cx="32" cy="10" r="3" fill="#5DBB74"/><rect x="110" y="6" width="80" height="8" rx="4" fill="#fff"/><rect x="12" y="30" width="52" height="7" rx="3.5" fill="#D9DCDF"/><rect x="12" y="42" width="34" height="11" rx="3" fill="#2B2F36"/><rect x="72" y="30" width="44" height="7" rx="3.5" fill="#D9DCDF"/><rect x="72" y="42" width="28" height="11" rx="3" fill="#2B2F36"/><path d="M12 106 L12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44 L206 106 Z" fill="#22B8CF" opacity=".16"/><path d="M12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44" fill="none" stroke="#22B8CF" stroke-width="2.4" stroke-linecap="round"/><circle cx="206" cy="44" r="3.6" fill="#22B8CF" stroke="#fff" stroke-width="1.6"/><rect x="222" y="30" width="66" height="76" rx="7" fill="#fff" stroke="#ECECE8"/><rect x="230" y="38" width="30" height="5" rx="2.5" fill="#D9DCDF"/><rect x="230" y="52" width="48" height="6" rx="3" fill="#C01830"/><rect x="230" y="64" width="38" height="6" rx="3" fill="#E0707F"/><rect x="230" y="76" width="28" height="6" rx="3" fill="#F0B5BE"/><rect x="230" y="88" width="18" height="6" rx="3" fill="#F8DCE0"/></svg></div>
+        <h3>Your live dashboard</h3>
+        <p>Log in to see your traffic, rankings and AI visibility, updated live.</p>
+      </a>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1GG1FmM2wN02qUdH5-GB73s049OJZbX2K" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#373737"/><g transform="rotate(-6 92 66)"><rect x="52" y="18" width="80" height="96" rx="5" fill="#E9E9E6"/></g><rect x="104" y="12" width="92" height="104" rx="6" fill="#FAFAF8"/><rect x="104" y="12" width="92" height="20" rx="6" fill="#C01830"/><rect x="104" y="24" width="92" height="8" fill="#C01830"/><rect x="112" y="19" width="40" height="5" rx="2.5" fill="#fff" opacity=".9"/><rect x="112" y="40" width="58" height="5" rx="2.5" fill="#2B2F36"/><rect x="112" y="50" width="76" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="58" width="66" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="92" width="10" height="16" rx="2" fill="#E8909C"/><rect x="126" y="84" width="10" height="24" rx="2" fill="#C01830"/><rect x="140" y="76" width="10" height="32" rx="2" fill="#C01830"/><rect x="154" y="70" width="10" height="38" rx="2" fill="#8E1224"/><rect x="170" y="72" width="18" height="36" rx="3" fill="#ECECE8"/><g transform="rotate(5 241 69)"><rect x="208" y="30" width="66" height="78" rx="6" fill="#FAFAF8"/><rect x="216" y="38" width="34" height="5" rx="2.5" fill="#2B2F36"/><rect x="216" y="48" width="50" height="4" rx="2" fill="#D9DCDF"/><rect x="216" y="56" width="44" height="4" rx="2" fill="#D9DCDF"/><circle cx="241" cy="84" r="14" fill="none" stroke="#ECECE8" stroke-width="6"/><path d="M241 70 A14 14 0 1 1 228 89" fill="none" stroke="#C01830" stroke-width="6" stroke-linecap="round"/></g></svg></div>
+        <h3>Monthly performance</h3>
+        <p>Your reports and plans, all in one folder</p>
+      </a>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1GG1FmM2wN02qUdH5-GB73s049OJZbX2K" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#373737"/><rect x="24" y="14" width="96" height="94" rx="7" fill="#FAFAF8"/><rect x="24" y="14" width="96" height="24" rx="7" fill="#C01830"/><rect x="24" y="28" width="96" height="10" fill="#C01830"/><rect x="44" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="95" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="56" y="22" width="32" height="6" rx="3" fill="#fff" opacity=".9"/><g fill="#E3E3DF"><rect x="34" y="46" width="14" height="12" rx="3"/><rect x="52" y="46" width="14" height="12" rx="3"/><rect x="70" y="46" width="14" height="12" rx="3"/><rect x="88" y="46" width="14" height="12" rx="3"/><rect x="52" y="62" width="14" height="12" rx="3"/><rect x="70" y="62" width="14" height="12" rx="3"/><rect x="88" y="62" width="14" height="12" rx="3"/><rect x="34" y="78" width="14" height="12" rx="3"/><rect x="52" y="78" width="14" height="12" rx="3"/><rect x="70" y="78" width="14" height="12" rx="3"/><rect x="88" y="78" width="14" height="12" rx="3"/></g><rect x="34" y="62" width="14" height="12" rx="3" fill="#C01830"/><rect x="138" y="22" width="140" height="78" rx="7" fill="#FAFAF8"/><rect x="150" y="32" width="56" height="6" rx="3" fill="#2B2F36"/><circle cx="157" cy="54" r="6" fill="#C01830"/><path d="M154 54l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="51" width="92" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="70" r="6" fill="#C01830"/><path d="M154 70l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="67" width="76" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="86" r="6" fill="none" stroke="#E8909C" stroke-width="2"/><rect x="170" y="83" width="64" height="5" rx="2.5" fill="#D9DCDF"/></svg></div>
+        <h3>Weekly updates</h3>
+        <p>Your Monday check-ins, in the same folder</p>
+      </a>
+    </div>
+  </section>
+</div>
+
+<div class="band"><div class="wrap">
+  <section>
+    <h2>Latest reports</h2>
+    <div class="rows">
+      <a class="row" href="https://drive.google.com/drive/folders/1GG1FmM2wN02qUdH5-GB73s049OJZbX2K" target="_blank" rel="noopener"><span class="rthumb" aria-hidden="true"><svg viewBox="0 0 40 48" width="40" height="48"><rect x="1" y="1" width="38" height="46" rx="5" fill="#fff" stroke="#E2E2DD"/><rect x="1" y="1" width="38" height="12" rx="5" fill="#C01830"/><rect x="1" y="8" width="38" height="5" fill="#C01830"/><rect x="7" y="18" width="20" height="3" rx="1.5" fill="#2B2F36"/><rect x="7" y="24" width="26" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="29" width="22" height="2.4" rx="1.2" fill="#D9DCDF"/><rect x="7" y="38" width="4" height="5" rx="1" fill="#E8909C"/><rect x="13" y="35" width="4" height="8" rx="1" fill="#C01830"/><rect x="19" y="33" width="4" height="10" rx="1" fill="#8E1224"/></svg></span><div class="rmain"><div class="rt">Your first monthly performance report</div><span class="rtag">Monthly report</span></div><span class="rd">End of Oct 2026</span><span class="rgo"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12 5.5l6.5 6.5-6.5 6.5"/></svg></span></a>
+    </div>
+    <a class="allbtn" href="https://drive.google.com/drive/folders/1GG1FmM2wN02qUdH5-GB73s049OJZbX2K" target="_blank" rel="noopener">All reports &rarr;</a>
+  </section>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <div class="two">
+      <div>
+        <h2>What we're working on</h2>
+        <div class="panel">
+          <div class="item"><span style="color:#C01830;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><rect x="5" y="12" width="3.6" height="8" rx="1.2"/><rect x="10.2" y="7" width="3.6" height="13" rx="1.2"/><rect x="15.4" y="14" width="3.6" height="6" rx="1.2"/><path d="M5 6l5-3 5 4 5-4"/></svg></span><div><p class="it">Google Ads bringing people to your site</p><p class="ib">Your new Ads account went live in late September and is sending around 40 people a week to the website.</p></div></div>
+          <div class="item"><span style="color:#C01830;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><p class="it">Counting the calls and enquiries</p><p class="ib">Making sure every call and form from the Ads gets counted, so we can see which searches bring real framing jobs.</p></div></div>
+          <div class="item"><span style="color:#C01830;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div><p class="it">A fresher homepage</p><p class="ib">Your homepage has had a tidy-up: clearer offer, how it works, your reviews and a new painted banner of the workshop.</p></div></div>
+          <div class="item"><span style="color:#C01830;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span><div><p class="it">Next: your address right everywhere</p><p class="ib">Fixing the old Garden Road address on Yellow, Fyple and other listings so every one shows 122 Upland Road.</p></div></div>
+        </div>
+      </div>
+      <div class="side">
+        <p class="sidehead">On your side</p>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1 1 21 12z"/></svg><div><p class="it">Tell us if someone found you on Google</p><p class="ib">If a customer mentions they saw you on Google, let us know. It helps us see what the Ads are bringing in.</p></div></div>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.4 2.4 4.6-4.9"/></svg><div><p class="it">Nothing for you to approve</p><p class="ib">We look after the site and the Ads and keep you posted. Anything urgent, we'll call.</p></div></div>
+        <a class="bookbtn" href="https://cluo.au/book" target="_blank" rel="noopener">Book a call &rarr;</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="fbwrap" style="background:linear-gradient(to bottom,#F7F4EE 0,#F7F4EE 50%,#161616 50%,#161616 100%)"><img class="fbanner" src="sgraffito-footer-banner.jpg" alt="" aria-hidden="true" style="-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 72%,transparent 100%)"></div>
+<footer>
+  <div class="wrap">
+    <div>Sgraffito Picture Framers</div>
+    <div><a href="mailto:karl@cluo.au">karl@cluo.au</a> &nbsp;&middot;&nbsp; <a href="https://cluo.au" target="_blank" rel="noopener">cluo.au</a></div>
+  </div>
+</footer>
+<div class="fbar" style="height:4px;background:#C01830"></div>
+
+</body>
+</html>
