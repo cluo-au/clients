@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reline Pro &middot; Your Cluo hub</title>
+<meta property="og:title" content="Reline Pro &middot; Your Cluo hub">
+<meta property="og:description" content="Your reports, stats and updates, all in one place.">
+<meta property="og:type" content="website">
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#F7F7F5;color:#2B2F36;
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.topbar{background:#0F1720;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.topbar .right{display:flex;align-items:center;gap:14px}
+.siteline{color:rgba(255,255,255,.6);font-size:12.5px;letter-spacing:.01em;display:flex;align-items:center;gap:5px;transition:color .15s}
+.siteline:hover{color:#1175BC}
+.topdiv{width:1px;height:13px;background:rgba(255,255,255,.18)}
+.byline{display:flex;align-items:center;gap:9px}
+.byline span{color:rgba(255,255,255,.55);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+
+.hero{background:#fff;border-bottom:1px solid #E4E6E9}
+.hero .wrap{display:flex;align-items:center;gap:36px}
+.hero-copy{flex:1;padding:50px 0;min-width:0}
+.hero-char{flex:none;align-self:flex-end}
+.hero-char img{height:260px;width:auto;display:block}
+.eyebrow{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;margin:0 0 12px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:42px;line-height:1.1;
+ margin:0;color:#0F1720;letter-spacing:-.015em}
+.rule{width:56px;height:4px;background:#1175BC;margin:22px 0 0;border-radius:2px}
+
+section{padding:34px 0}
+h2{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#868D96;
+ font-weight:600;margin:0 0 20px}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile{position:relative;background:#fff;border:1px solid #E4E6E9;border-radius:14px;
+ padding:22px 20px 20px;display:block;overflow:hidden;transition:border-color .15s,transform .15s,box-shadow .15s}
+.tile:hover{border-color:#1175BC;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.tile h3{font-size:16.5px;font-weight:600;margin:0 0 3px;color:#0F1720;letter-spacing:-.01em}
+.tile p{font-size:13.5px;color:#868D96;margin:0;line-height:1.4}
+.tile .go{position:absolute;top:22px;right:20px;color:#B7BDC7;transition:color .15s}
+.tile:hover .go{color:#0F1720}
+
+.tile-stats{background:linear-gradient(135deg,#0F1720 0%,#1E2A36 100%);border-color:#1E2A36}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.6)}
+.tile-stats .go{color:rgba(255,255,255,.45)}
+.tile-stats:hover .go{color:#1175BC}
+.tile-stats .badge{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.1);
+ display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+.badge{width:44px;height:44px;border-radius:12px;display:block;margin-bottom:14px}
+
+.two{display:grid;grid-template-columns:1.35fr 1fr;gap:22px;align-items:start}
+.panel{background:#fff;border:1px solid #E4E6E9;border-radius:14px;padding:6px 22px}
+.item{display:flex;gap:15px;padding:17px 0;border-top:1px solid #E4E6E9}
+.item:first-child{border-top:0}
+.item .ic{flex:none;margin-top:1px}
+.item .it{font-size:15.5px;font-weight:600;color:#0F1720;margin:0 0 2px}
+.item .ib{font-size:13.5px;color:#4A5058;margin:0;line-height:1.5}
+.side{background:#0F1720;border-radius:14px;padding:2px 22px 22px;color:#fff}
+.side .item{border-top:1px solid rgba(255,255,255,.14)}
+.side .item .ic{color:#1175BC}
+.side .it{color:#fff}
+.side .ib{color:rgba(255,255,255,.72)}
+.sidehead{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#1175BC;
+ font-weight:600;margin:0;padding:22px 0 2px}
+.bookbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#1175BC;
+ color:#fff;font-size:13px;font-weight:600;padding:8px 16px;border-radius:999px}
+.bookbtn:hover{filter:brightness(1.12)}
+
+footer{background:#0F1720;color:rgba(255,255,255,.62);padding:26px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;
+ flex-wrap:wrap;font-size:13px}
+footer .fbar{height:4px;background:#1175BC}
+footer a{color:rgba(255,255,255,.85)}
+footer a:hover{color:#fff}
+
+@media(max-width:880px){
+ .hero .wrap{gap:22px}
+ .hero-char img{height:220px}
+ .tiles{grid-template-columns:1fr 1fr}
+ .tile-stats{grid-column:1/-1}
+ .two{grid-template-columns:1fr}
+ h1{font-size:32px}
+}
+@media(max-width:620px){
+ .hero .wrap{flex-direction:column-reverse;align-items:flex-start;padding-top:30px}
+ .hero-copy{padding:20px 0 34px}
+ .hero-char{align-self:flex-start}
+ .hero-char img{height:170px}
+ .tiles{grid-template-columns:1fr}
+ .tile-stats{grid-column:auto}
+ .topbar .siteline span.long{display:none}
+}
+.band{background:#F3F8FC;border-top:1px solid #DCEAF6;border-bottom:1px solid #DCEAF6}
+.rows{background:#fff;border:1px solid #E4E6E9;border-radius:14px;overflow:hidden}
+.row{display:flex;align-items:center;gap:17px;border-top:1px solid #E4E6E9}
+.row:first-child{border-top:0}
+.row .rmain{flex:1;min-width:0}
+.row .rt{font-size:15.5px;font-weight:600}
+
+.tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:stretch}
+.tile-stats{background:linear-gradient(135deg,#0F1720 0%,#1E2A36 100%);border-color:#1E2A36}
+.tile-stats h3{color:#fff}
+.tile-stats p{color:rgba(255,255,255,.66)}
+.dash{margin:0 0 16px;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.dash svg{display:block}
+.tile-stats .go{display:none}
+.row{padding:14px 22px}
+.rthumb{flex:none;display:flex;filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));transition:transform .15s}
+a.row:hover .rthumb{transform:translateY(-2px) rotate(-2deg)}
+.rtag{display:inline-block;margin-top:5px;padding:2px 9px;border-radius:999px;background:#E6F0F9;color:#0B4F80;font-size:11.5px;font-weight:600;letter-spacing:.02em}
+.row .rd{background:#F1F1EE;color:#4A5058;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:500;flex:none;white-space:nowrap}
+.rgo{flex:none;color:#B7BDC7;display:flex;transition:color .15s,transform .15s}
+a.row:hover .rgo{color:#1175BC;transform:translateX(3px)}
+.allbtn{display:inline-flex;align-items:center;gap:6px;margin-top:16px;background:#1175BC;color:#fff;font-size:13px;font-weight:600;padding:9px 18px;border-radius:999px;transition:filter .15s}
+.allbtn:hover{filter:brightness(1.1)}
+.fbanner{display:block;width:100%;height:auto;margin-top:0}
+@media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tile-stats{grid-column:auto}}
+@media(max-width:620px){.topbar img.client{height:32px!important}.tiles{grid-template-columns:1fr}.row .rd{display:inline-block}.rgo{display:none}}
+
+/* 4-tile row + mobile 2x2 (5 Oct 2026) */
+.lbl-m{display:none}
+.tiles{grid-template-columns:repeat(4,1fr)}
+@media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tile-stats{grid-column:auto}}
+@media(max-width:620px){.tiles{grid-template-columns:1fr 1fr;gap:10px}.tiles .tile{padding:10px 10px 13px}.tiles .dash{margin:0 0 9px;border-radius:7px}.tiles .tile p{display:none}.tiles .tile h3{font-size:14.5px;line-height:1.25;margin:0}.lbl-d{display:none}.lbl-m{display:inline}}
+
+.hero-photo{flex:none;width:340px;padding:30px 0}
+.hero-photo img{width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 10px 28px rgba(15,23,32,.18)}
+.topbar img.client{height:28px}
+@media(max-width:880px){.hero-photo{width:260px}}
+@media(max-width:620px){.hero .wrap{flex-direction:column-reverse;align-items:stretch}.hero-photo{width:100%;padding:0}}
+@media(max-width:620px){.topbar img.client{height:22px!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <img class="client" src="reline-pro-logo.png" alt="Reline Pro" style="height:28px;width:auto;display:block">
+  <div class="right">
+    <a class="siteline" href="https://relinepro.co.nz" target="_blank" rel="noopener"><span class="long">relinepro.co.nz</span> &nearr;</a>
+    <div class="topdiv"></div>
+    <div class="byline"><span>Managed by Cluo</span></div>
+  </div>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <div class="hero-copy">
+  <p class="eyebrow">Your Cluo hub</p>
+  <h1>Your website, search and AI visibility.</h1>
+  <div class="rule"></div>
+  </div>
+  <div class="hero-photo"><img src="reline-pro-team.jpg" alt="The Reline Pro crew with the van outside the Auckland base"></div>
+</div></div>
+
+<div class="wrap">
+  <section>
+    <h2>Where to find things</h2>
+    <div class="tiles">
+      <a class="tile tile-stats" href="https://agencystats.co" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="10" fill="#FAFAF8"/><rect x="0" y="0" width="300" height="20" rx="10" fill="#ECECE8"/><rect x="0" y="12" width="300" height="8" fill="#ECECE8"/><circle cx="12" cy="10" r="3" fill="#E36B5D"/><circle cx="22" cy="10" r="3" fill="#E5B84B"/><circle cx="32" cy="10" r="3" fill="#5DBB74"/><rect x="110" y="6" width="80" height="8" rx="4" fill="#fff"/><rect x="12" y="30" width="52" height="7" rx="3.5" fill="#D9DCDF"/><rect x="12" y="42" width="34" height="11" rx="3" fill="#2B2F36"/><rect x="72" y="30" width="44" height="7" rx="3.5" fill="#D9DCDF"/><rect x="72" y="42" width="28" height="11" rx="3" fill="#2B2F36"/><path d="M12 106 L12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44 L206 106 Z" fill="#22B8CF" opacity=".16"/><path d="M12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44" fill="none" stroke="#22B8CF" stroke-width="2.4" stroke-linecap="round"/><circle cx="206" cy="44" r="3.6" fill="#22B8CF" stroke="#fff" stroke-width="1.6"/><rect x="222" y="30" width="66" height="76" rx="7" fill="#fff" stroke="#ECECE8"/><rect x="230" y="38" width="30" height="5" rx="2.5" fill="#D9DCDF"/><rect x="230" y="52" width="48" height="6" rx="3" fill="#1175BC"/><rect x="230" y="64" width="38" height="6" rx="3" fill="#85D5C2"/><rect x="230" y="76" width="28" height="6" rx="3" fill="#C2EAE0"/><rect x="230" y="88" width="18" height="6" rx="3" fill="#DAF2ED"/></svg></div>
+        <h3><span class="lbl-d">Your live dashboard</span><span class="lbl-m">Live stats</span></h3>
+        <p>Log in to see your traffic, rankings and AI visibility, updated live.</p>
+      </a>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1swtIA9PIMPoKYkHbErbdTUtyrsoscRnL" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#2A3744"/><g transform="rotate(-6 92 66)"><rect x="52" y="18" width="80" height="96" rx="5" fill="#E9E9E6"/></g><rect x="104" y="12" width="92" height="104" rx="6" fill="#FAFAF8"/><rect x="104" y="12" width="92" height="20" rx="6" fill="#1175BC"/><rect x="104" y="24" width="92" height="8" fill="#1175BC"/><rect x="112" y="19" width="40" height="5" rx="2.5" fill="#fff" opacity=".9"/><rect x="112" y="40" width="58" height="5" rx="2.5" fill="#2B2F36"/><rect x="112" y="50" width="76" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="58" width="66" height="4" rx="2" fill="#D9DCDF"/><rect x="112" y="92" width="10" height="16" rx="2" fill="#A9CDEA"/><rect x="126" y="84" width="10" height="24" rx="2" fill="#1175BC"/><rect x="140" y="76" width="10" height="32" rx="2" fill="#1175BC"/><rect x="154" y="70" width="10" height="38" rx="2" fill="#0B4F80"/><rect x="170" y="72" width="18" height="36" rx="3" fill="#ECECE8"/><g transform="rotate(5 241 69)"><rect x="208" y="30" width="66" height="78" rx="6" fill="#FAFAF8"/><rect x="216" y="38" width="34" height="5" rx="2.5" fill="#2B2F36"/><rect x="216" y="48" width="50" height="4" rx="2" fill="#D9DCDF"/><rect x="216" y="56" width="44" height="4" rx="2" fill="#D9DCDF"/><circle cx="241" cy="84" r="14" fill="none" stroke="#ECECE8" stroke-width="6"/><path d="M241 70 A14 14 0 1 1 228 89" fill="none" stroke="#1175BC" stroke-width="6" stroke-linecap="round"/></g></svg></div>
+        <h3>Monthly performance</h3>
+        <p>Your 30-day and mid-month reports, plus your quarter plan</p>
+      </a>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1pLzd0zOaApBX5MSUOQj0NQVHL8WxCp7W" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#2A3744"/><rect x="24" y="14" width="96" height="94" rx="7" fill="#FAFAF8"/><rect x="24" y="14" width="96" height="24" rx="7" fill="#1175BC"/><rect x="24" y="28" width="96" height="10" fill="#1175BC"/><rect x="44" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="95" y="8" width="5" height="14" rx="2.5" fill="#D9DCDF"/><rect x="56" y="22" width="32" height="6" rx="3" fill="#fff" opacity=".9"/><g fill="#E3E3DF"><rect x="34" y="46" width="14" height="12" rx="3"/><rect x="52" y="46" width="14" height="12" rx="3"/><rect x="70" y="46" width="14" height="12" rx="3"/><rect x="88" y="46" width="14" height="12" rx="3"/><rect x="52" y="62" width="14" height="12" rx="3"/><rect x="70" y="62" width="14" height="12" rx="3"/><rect x="88" y="62" width="14" height="12" rx="3"/><rect x="34" y="78" width="14" height="12" rx="3"/><rect x="52" y="78" width="14" height="12" rx="3"/><rect x="70" y="78" width="14" height="12" rx="3"/><rect x="88" y="78" width="14" height="12" rx="3"/></g><rect x="34" y="62" width="14" height="12" rx="3" fill="#1175BC"/><rect x="138" y="22" width="140" height="78" rx="7" fill="#FAFAF8"/><rect x="150" y="32" width="56" height="6" rx="3" fill="#2B2F36"/><circle cx="157" cy="54" r="6" fill="#1175BC"/><path d="M154 54l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="51" width="92" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="70" r="6" fill="#1175BC"/><path d="M154 70l2 2 4-4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="170" y="67" width="76" height="5" rx="2.5" fill="#D9DCDF"/><circle cx="157" cy="86" r="6" fill="none" stroke="#A9CDEA" stroke-width="2"/><rect x="170" y="83" width="64" height="5" rx="2.5" fill="#D9DCDF"/></svg></div>
+        <h3>Weekly updates</h3>
+        <p>A quick one-page check-in every Monday</p>
+      </a>
+      <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1mm7sfpxlTx3TU8SanSmBvbIQygIGD-10" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#2A3744"/><g transform="rotate(-7 100 64)"><path d="M62 18 h70 a5 5 0 0 1 5 5 V104 L132.5 109.0 L128.0 104.0 L123.5 109.0 L119.0 104.0 L114.5 109.0 L110.0 104.0 L105.5 109.0 L101.0 104.0 L96.5 109.0 L92.0 104.0 L87.5 109.0 L83.0 104.0 L78.5 109.0 L74.0 104.0 L69.5 109.0 L65.0 104.0 L62.0 109.0 Z" fill="#E9E9E6"/></g><path d="M106 10 h86 a6 6 0 0 1 6 6 V106 L193.5 111.0 L189.0 106.0 L184.5 111.0 L180.0 106.0 L175.5 111.0 L171.0 106.0 L166.5 111.0 L162.0 106.0 L157.5 111.0 L153.0 106.0 L148.5 111.0 L144.0 106.0 L139.5 111.0 L135.0 106.0 L130.5 111.0 L126.0 106.0 L121.5 111.0 L117.0 106.0 L112.5 111.0 L108.0 106.0 L103.5 111.0 L100.0 106.0 V16 a6 6 0 0 1 6 -6 Z" fill="#FAFAF8"/><rect x="100" y="10" width="98" height="20" rx="6" fill="#1175BC"/><rect x="100" y="22" width="98" height="8" fill="#1175BC"/><rect x="108" y="17" width="34" height="5" rx="2.5" fill="#fff" opacity=".9"/><rect x="108" y="40" width="46" height="4" rx="2" fill="#D9DCDF"/><rect x="172" y="40" width="18" height="4" rx="2" fill="#2B2F36" opacity=".55"/><rect x="108" y="52" width="38" height="4" rx="2" fill="#D9DCDF"/><rect x="172" y="52" width="18" height="4" rx="2" fill="#2B2F36" opacity=".55"/><rect x="108" y="64" width="52" height="4" rx="2" fill="#D9DCDF"/><rect x="172" y="64" width="18" height="4" rx="2" fill="#2B2F36" opacity=".55"/><rect x="108" y="78" width="82" height="1.5" fill="#E3E3DF"/><rect x="108" y="85" width="30" height="6" rx="3" fill="#2B2F36"/><rect x="164" y="84" width="26" height="8" rx="3" fill="#1175BC"/><g transform="rotate(10 244 62)"><circle cx="244" cy="62" r="25" fill="#1175BC"/><circle cx="244" cy="62" r="20" fill="none" stroke="#2B2F36" stroke-width="1.6" stroke-dasharray="3 3" opacity=".7"/><path d="M234 62l7 7 13-14" fill="none" stroke="#2B2F36" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
+        <h3>Invoices</h3>
+        <p>Every invoice, labelled by month, ready to download</p>
+      </a>
+    </div>
+  </section>
+</div>
+
+
+
+<div class="wrap">
+  <section>
+    <div class="two">
+      <div>
+        <h2>What we're working on</h2>
+        <div class="panel">
+          <div class="item"><span style="color:#1175BC;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><div><p class="it">Your new website, live</p><p class="ib">Rebuilt and live on relinepro.co.nz since 12 September, with about, services, technical spec and FAQ pages.</p></div></div>
+          <div class="item"><span style="color:#0E8F86;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><div><p class="it">Sizing the market first</p><p class="ib">Checking how many civil contractors, engineers and plumbers actually search for relining before any ad money is spent.</p></div></div>
+          <div class="item"><span style="color:#6C4BD8;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span><div><p class="it">Showing up in AI answers</p><p class="ib">A baseline of whether ChatGPT and Google&#x27;s AI name Reline Pro for relining questions in New Zealand.</p></div></div>
+          <div class="item"><span style="color:#C7466B;display:flex;flex:none;margin-top:1px"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><rect x="5" y="12" width="3.6" height="8" rx="1.2"/><rect x="10.2" y="7" width="3.6" height="13" rx="1.2"/><rect x="15.4" y="14" width="3.6" height="6" rx="1.2"/><path d="M5 6l5-3 5 4 5-4"/></svg></span><div><p class="it">Next: tracking set up</p><p class="ib">Analytics, Search Console and call tracking, so every enquiry from the site is counted.</p></div></div>
+        </div>
+      </div>
+      <div class="side">
+        <p class="sidehead">On your side</p>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg><div><p class="it">Legal page wording</p><p class="ib">Privacy, refund and terms text for the site footer.</p></div></div>
+        <div class="item"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M7 10h6M7 14h4"/></svg><div><p class="it">Your DL card artwork</p><p class="ib">So the site and the card match exactly.</p></div></div>
+        <a class="bookbtn" href="https://cluo.au/book" target="_blank" rel="noopener">Book a call &rarr;</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>Reline Pro</div>
+    <div><a href="mailto:karl@cluo.au">karl@cluo.au</a> &nbsp;&middot;&nbsp; <a href="https://cluo.au" target="_blank" rel="noopener">cluo.au</a></div>
+  </div>
+</footer>
+<div class="fbar" style="height:4px;background:#1175BC"></div>
+
+</body>
+</html>
