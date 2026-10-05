@@ -42,21 +42,21 @@ h1 em{font-style:italic;color:#FFD24A}
 .card{grid-column:span 2;background:#fff;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(17,18,20,.04),0 0 0 1px rgba(17,18,20,.06);transition:transform .18s,box-shadow .18s}
 .card.big{grid-column:span 3}
 .card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(17,18,20,.12),0 0 0 1px rgba(17,18,20,.08)}
-.pic{position:relative;aspect-ratio:16/8;overflow:hidden;background:#222}
-.card.big .pic{aspect-ratio:16/7}
-.pic img.bg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-.card:hover .pic img.bg{transform:scale(1.04)}
+.pic{position:relative;aspect-ratio:16/8;overflow:hidden;background:#E9E7E1}
+.card.big .pic{aspect-ratio:16/8}
+.pic img.bg{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.card:hover .pic img.bg{transform:scale(1.02)}
 .num{position:absolute;top:12px;left:12px;font-family:Georgia,serif;font-style:italic;font-size:13px;color:#fff;background:rgba(17,18,20,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);padding:3px 10px;border-radius:999px}
-.chip{position:absolute;left:12px;bottom:12px;background:rgba(17,18,20,.86);border-radius:10px;padding:8px 11px;display:flex;align-items:center}
+.chip{display:none}
 .chip.light{background:rgba(255,255,255,.94)}
 .chip img{height:30px;width:auto;display:block}
 .card.big .chip img{height:34px}
 .card:not(.big) .chip{padding:6px 9px}
 .card:not(.big) .chip img{height:22px}
 .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
-.name{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.name{display:flex;flex-direction:column;gap:2px}
 .name h3{margin:0;font-size:18px;font-weight:650;letter-spacing:-.01em;color:#111214}
-.name small{font-size:12.5px;color:#8A8D93;white-space:nowrap}
+.name small{font-size:12.5px;color:#8A8D93}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tags span{font-size:11.5px;font-weight:600;color:#5B5E64;background:#F1EFE9;border-radius:999px;padding:3px 10px}
 .open{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #EFEDE7;font-size:13.5px;font-weight:600;color:#111214}
@@ -110,12 +110,11 @@ footer a{color:rgba(255,255,255,.82)}
  h1{font-size:38px}
  .grid{grid-template-columns:1fr;gap:14px}
  .card.big:first-child{grid-column:auto}
- .pic,.card.big .pic{aspect-ratio:16/8}
+ .pic,.card.big .pic{aspect-ratio:16/9}
  .chip img,.card.big .chip img{height:26px}
  .head{flex-direction:column;gap:4px}
  .call .wrap{flex-direction:column;align-items:flex-start}
  .call h2{font-size:24px}
- .name small{display:none}
  .chip img,.card.big .chip img,.card:not(.big) .chip img{height:24px}
 }
 </style>
@@ -143,11 +142,11 @@ footer a{color:rgba(255,255,255,.82)}
 </div></div>
 
 <section class="biz"><div class="wrap">
-  <div class="head"><h2>Your businesses</h2><p>Each one opens its own hub</p></div>
+  <div class="head"><h2>Your websites</h2><p>Each one opens its own hub</p></div>
   <div class="grid">
 
     <a class="card big" href="https://clients.cluo.au/auckland-plumbers/">
-      <div class="pic"><img class="bg" src="auckland.jpg" alt="PlumbQuick van in front of the Auckland Harbour Bridge and Sky Tower"><span class="num">01</span><span class="chip"><img src="auckland-logo.png" alt="Auckland Plumbers"></span></div>
+      <div class="pic"><img class="bg" src="site-auckland.jpg" alt="Website homepage"><span class="num">01</span><span class="chip"><img src="auckland-logo.png" alt="Auckland Plumbers"></span></div>
       <div class="body">
         <div class="name"><h3>Auckland Plumbers</h3><small>plumbersauckland.co.nz</small></div>
         <div class="tags"><span>Google Ads</span><span>Local search</span><span>New website</span></div>
@@ -156,7 +155,7 @@ footer a{color:rgba(255,255,255,.82)}
     </a>
 
     <a class="card big" href="https://clients.cluo.au/wellington-plumbers/">
-      <div class="pic"><img class="bg" src="wellington.jpg" alt="PlumbQuick van on the Wellington waterfront"><span class="num">02</span><span class="chip"><img src="wellington-logo.png" alt="Wellington Plumbers"></span></div>
+      <div class="pic"><img class="bg" src="site-wellington.jpg" alt="Website homepage"><span class="num">02</span><span class="chip"><img src="wellington-logo.png" alt="Wellington Plumbers"></span></div>
       <div class="body">
         <div class="name"><h3>Wellington Plumbers</h3><small>plumberwellington.co.nz</small></div>
         <div class="tags"><span>Google Ads</span><span>Local search</span></div>
@@ -165,27 +164,27 @@ footer a{color:rgba(255,255,255,.82)}
     </a>
 
     <a class="card" href="https://clients.cluo.au/christchurch-plumbers/">
-      <div class="pic"><img class="bg" src="christchurch.jpg" alt="PlumbQuick van by the Avon River in Christchurch"><span class="num">03</span><span class="chip"><img src="christchurch-logo.png" alt="Christchurch Plumbers"></span></div>
+      <div class="pic"><img class="bg" src="site-christchurch.jpg" alt="Website homepage"><span class="num">03</span><span class="chip"><img src="christchurch-logo.png" alt="Christchurch Plumbers"></span></div>
       <div class="body">
-        <div class="name"><h3>Christchurch Plumbers</h3></div>
+        <div class="name"><h3>Christchurch Plumbers</h3><small>plumberchristchurch.co.nz</small></div>
         <div class="tags"><span>Google Ads</span><span>Local search</span></div>
         <div class="open">Open hub<i>&rarr;</i></div>
       </div>
     </a>
 
     <a class="card" href="https://clients.cluo.au/budget-bathrooms/">
-      <div class="pic"><img class="bg" src="budget-bathroom.jpg" alt="PlumbQuick van outside a villa with a new bathroom suite"><span class="num">04</span><span class="chip light"><img src="budget-bathroom-logo.png" alt="Budget Bathroom"></span></div>
+      <div class="pic"><img class="bg" src="site-budget-bathroom.jpg" alt="Website homepage"><span class="num">04</span><span class="chip light"><img src="budget-bathroom-logo.png" alt="Budget Bathroom"></span></div>
       <div class="body">
-        <div class="name"><h3>Budget Bathroom</h3></div>
+        <div class="name"><h3>Budget Bathroom</h3><small>budgetbathrooms.co.nz</small></div>
         <div class="tags"><span>Google Ads</span><span>SEO</span><span>AI visibility</span></div>
         <div class="open">Open hub<i>&rarr;</i></div>
       </div>
     </a>
 
     <a class="card reline" href="https://clients.cluo.au/reline-pro/">
-      <div class="pic"><img class="bg" src="reline-pro.jpg" alt="Reline Pro van on a leafy Auckland street with the Sky Tower behind"><span class="num">05</span><span class="chip"><img src="reline-pro-logo.png" alt="Reline Pro"></span></div>
+      <div class="pic"><img class="bg" src="site-reline-pro.jpg" alt="Website homepage"><span class="num">05</span><span class="chip"><img src="reline-pro-logo.png" alt="Reline Pro"></span></div>
       <div class="body">
-        <div class="name"><h3>Reline Pro</h3></div>
+        <div class="name"><h3>Reline Pro</h3><small>relinepro.co.nz</small></div>
         <div class="tags"><span>New website</span><span>SEO</span><span>AI visibility</span></div>
         <div class="open">Open hub<i>&rarr;</i></div>
       </div>
