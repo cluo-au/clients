@@ -133,6 +133,30 @@ a.row:hover .rgo{color:#0B7478;transform:translateX(3px)}
 .tiles{grid-template-columns:repeat(4,1fr)}
 @media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tile-stats{grid-column:auto}}
 @media(max-width:620px){.tiles{grid-template-columns:1fr 1fr;gap:10px}.tiles .tile{padding:10px 10px 13px}.tiles .dash{margin:0 0 9px;border-radius:7px}.tiles .tile p{display:none}.tiles .tile h3{font-size:14.5px;line-height:1.25;margin:0}.lbl-d{display:none}.lbl-m{display:inline}}
+
+/* Mobile: hero side-by-side, card tiles, pop (5 Oct 2026) */
+@media(max-width:620px){
+ .hero .wrap{flex-direction:row;align-items:center;gap:12px;padding-top:0}
+ .hero-copy{flex:1;min-width:0;padding:24px 0}
+ .hero-char{align-self:flex-end;flex:none;margin-left:auto}
+ .hero-char img{height:250px}
+ .hero h1{font-size:26px;line-height:1.12}
+ .hero .eyebrow{font-size:11px;margin:0 0 8px}
+ .hero .rule{margin-top:14px}
+}
+@media(max-width:620px){
+ .tiles .tile{display:flex;flex-direction:column;aspect-ratio:1/0.9;padding:12px 12px 14px}
+ .tiles .dash{margin:0;border-radius:8px}
+ .tiles .tile h3{margin-top:auto;font-size:15px}
+}
+@keyframes tilepop{0%,22%,100%{transform:translateY(0) scale(1);box-shadow:0 0 0 rgba(0,0,0,0)}11%{transform:translateY(-5px) scale(1.04);box-shadow:0 12px 24px rgba(0,0,0,.22)}}
+@media(max-width:620px){
+ .tiles .tile{animation:tilepop 8s ease-in-out infinite}
+ .tiles .tile:nth-child(2){animation-delay:2s}
+ .tiles .tile:nth-child(3){animation-delay:4s}
+ .tiles .tile:nth-child(4){animation-delay:6s}
+}
+@media(prefers-reduced-motion:reduce){.tiles .tile{animation:none}}
 </style>
 </head>
 <body>
