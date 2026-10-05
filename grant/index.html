@@ -64,7 +64,7 @@ h1 em{font-style:italic;color:#FFD24A}
 .card:hover .open i{transform:translateX(3px)}
 .card.reline .open i{background:#1175BC;color:#fff}
 
-.inside{padding:26px 0 54px}
+.inside{padding:26px 0 10px}
 .strip{background:#fff;border-radius:16px;box-shadow:0 0 0 1px rgba(17,18,20,.06);display:grid;grid-template-columns:repeat(4,1fr)}
 .strip div{padding:18px 20px;border-left:1px solid #EFEDE7}
 .strip div:first-child{border-left:0}
@@ -82,6 +82,18 @@ footer{background:#0B0C0D;color:rgba(255,255,255,.55);padding:22px 0;font-size:1
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:rgba(255,255,255,.82)}
 .fbar{height:4px;background:linear-gradient(90deg,#FFD24A 0,#FFD24A 80%,#1175BC 80%,#1175BC 100%)}
+
+.stats{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:#111214;color:#fff;border-radius:18px;overflow:hidden;margin:0 0 34px;box-shadow:0 14px 34px rgba(17,18,20,.14);transition:transform .18s}
+.stats:hover{transform:translateY(-3px)}
+.stats-pic{padding:28px 0 28px 28px;display:flex;align-items:center}
+.stats-pic svg{display:block;border-radius:10px;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.stats-body{padding:34px 36px;display:flex;flex-direction:column;justify-content:center}
+.stats-h{font-family:Georgia,serif;font-weight:400;font-size:30px;margin:0 0 10px;letter-spacing:-.01em;color:#fff;text-transform:none;line-height:1.1}
+.stats-body p{margin:0 0 20px;color:rgba(255,255,255,.66);font-size:15px;line-height:1.55}
+.stats .btn{align-self:flex-start}
+.fbwrap{margin-top:10px}
+.fbanner{display:block;width:100%;height:auto}
+@media(max-width:900px){.stats{grid-template-columns:1fr}.stats-pic{padding:24px 24px 0}.stats-body{padding:22px 24px 28px}}
 
 @media(max-width:900px){
  .hero .wrap{grid-template-columns:1fr;gap:34px}
@@ -119,7 +131,7 @@ footer a{color:rgba(255,255,255,.82)}
   <div>
     <p class="eyebrow">Your Cluo portfolio</p>
     <h1>Five businesses.<br><em>One link.</em></h1>
-    <p class="lede">Every business we look after for you, in one place. Tap one to open its hub: live stats, monthly performance, weekly updates and invoices.</p>
+    <p class="lede">Every business we look after for you, in one place. Tap one to open its hub, or jump straight to live stats for all five.</p>
   </div>
   <ol class="index">
     <li><a href="https://clients.cluo.au/auckland-plumbers/"><span>01</span>Auckland Plumbers<i>&rarr;</i></a></li>
@@ -171,7 +183,7 @@ footer a{color:rgba(255,255,255,.82)}
     </a>
 
     <a class="card reline" href="https://clients.cluo.au/reline-pro/">
-      <div class="pic"><img class="bg" src="reline-pro.jpg" alt="The Reline Pro crew with the van outside the Auckland base" style="object-position:50% 62%"><span class="num">05</span><span class="chip"><img src="reline-pro-logo.png" alt="Reline Pro"></span></div>
+      <div class="pic"><img class="bg" src="reline-pro.jpg" alt="Reline Pro van on a leafy Auckland street with the Sky Tower behind"><span class="num">05</span><span class="chip"><img src="reline-pro-logo.png" alt="Reline Pro"></span></div>
       <div class="body">
         <div class="name"><h3>Reline Pro</h3></div>
         <div class="tags"><span>New website</span><span>SEO</span><span>AI visibility</span></div>
@@ -183,6 +195,15 @@ footer a{color:rgba(255,255,255,.82)}
 </div></section>
 
 <section class="inside"><div class="wrap">
+  <a class="stats" href="https://agencystats.co" target="_blank" rel="noopener">
+    <div class="stats-pic"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect x="0" y="0" width="300" height="120" rx="10" fill="#FAFAF8"/><rect x="0" y="0" width="300" height="20" rx="10" fill="#ECECE8"/><rect x="0" y="12" width="300" height="8" fill="#ECECE8"/><circle cx="12" cy="10" r="3" fill="#E36B5D"/><circle cx="22" cy="10" r="3" fill="#E5B84B"/><circle cx="32" cy="10" r="3" fill="#5DBB74"/><rect x="110" y="6" width="80" height="8" rx="4" fill="#fff"/><rect x="12" y="30" width="52" height="7" rx="3.5" fill="#D9DCDF"/><rect x="12" y="42" width="34" height="11" rx="3" fill="#2B2F36"/><rect x="72" y="30" width="44" height="7" rx="3.5" fill="#D9DCDF"/><rect x="72" y="42" width="28" height="11" rx="3" fill="#2B2F36"/><path d="M12 106 L12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44 L206 106 Z" fill="#22B8CF" opacity=".16"/><path d="M12 92 C30 90 38 84 52 86 S78 76 92 78 S118 66 132 68 S158 58 172 56 S196 50 206 44" fill="none" stroke="#22B8CF" stroke-width="2.4" stroke-linecap="round"/><circle cx="206" cy="44" r="3.6" fill="#22B8CF" stroke="#fff" stroke-width="1.6"/><rect x="222" y="30" width="66" height="76" rx="7" fill="#fff" stroke="#ECECE8"/><rect x="230" y="38" width="30" height="5" rx="2.5" fill="#D9DCDF"/><rect x="230" y="52" width="48" height="6" rx="3" fill="#FFD24A"/><rect x="230" y="64" width="38" height="6" rx="3" fill="#FFE38A"/><rect x="230" y="76" width="28" height="6" rx="3" fill="#FFEFB8"/><rect x="230" y="88" width="18" height="6" rx="3" fill="#FFF7DC"/></svg></div>
+    <div class="stats-body">
+      <p class="eyebrow" style="margin-bottom:10px">Live stats</p>
+      <h2 class="stats-h">All five, one login.</h2>
+      <p>Traffic, rankings and AI visibility for every business, updated live. One login covers the lot, so you never have to open each hub to get there.</p>
+      <span class="btn">Open live stats &rarr;</span>
+    </div>
+  </a>
   <div class="head"><h2>Inside every hub</h2></div>
   <div class="strip">
     <div><b>Live stats</b><span>Traffic, rankings and AI visibility, updated live</span></div>
@@ -191,6 +212,8 @@ footer a{color:rgba(255,255,255,.82)}
     <div><b>Invoices</b><span>Every invoice, labelled by month</span></div>
   </div>
 </div></section>
+
+<div class="fbwrap" style="background:linear-gradient(to bottom,#F3F1EB 0,#F3F1EB 50%,#111214 50%,#111214 100%)"><img class="fbanner" src="grant-footer-banner.jpg" alt="" aria-hidden="true" style="-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 72%,transparent 100%)"></div>
 
 <div class="call"><div class="wrap">
   <div>
