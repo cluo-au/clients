@@ -167,6 +167,45 @@ a.row:hover .rgo{color:#C59623;transform:translateX(3px)}
  .tiles .dash{margin:0;border-radius:8px}
  .tiles .tile h3{margin-top:auto;font-size:15px}
 }
+
+/* Hero v3: bigger layered character + what's happening now (26 Oct 2026, Lewis test) */
+.hero{border-bottom:0;position:relative;overflow:visible}
+.hero .wrap{align-items:flex-end;gap:40px}
+.hero-copy{padding:64px 0 58px}
+.hero-sub{font-size:15px;color:#4A5058;margin:18px 0 0;max-width:460px;line-height:1.5}
+.hero-char{position:relative;align-self:flex-end;margin-bottom:-44px;z-index:2;width:340px;display:flex;justify-content:center}
+.hero-char .arch{position:absolute;left:50%;bottom:44px;transform:translateX(-50%);width:300px;height:330px;border-radius:150px 150px 0 0;
+ background:linear-gradient(180deg,#F3E3B9 0%,#C59623 100%);box-shadow:inset 0 -60px 80px rgba(0,0,0,.08)}
+.hero-char .arch::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:360px;height:22px;border-radius:50%;background:rgba(0,0,0,.14);filter:blur(10px)}
+.hero-char img{position:relative;height:380px;filter:drop-shadow(0 18px 24px rgba(0,0,0,.28))}
+.hero + .wrap > section:first-child{padding-top:70px}
+.now{padding-top:6px}
+.nowsub{font-size:14.5px;color:#4A5058;margin:-10px 0 18px}
+.nowlist{background:#fff;border:1px solid #E4E6E9;border-radius:14px;padding:4px 22px}
+.nl{display:flex;gap:16px;align-items:flex-start;padding:15px 0;border-top:1px solid #E4E6E9}
+.nl:first-child{border-top:0}
+.nl p{margin:0;font-size:15px;line-height:1.5;color:#4A5058}
+.nl p b{color:#000;font-weight:600}
+.st{flex:none;width:72px;margin-top:3px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 0;border-radius:999px}
+.st.good{background:#E6F4EA;color:#1E7A3A}
+.st.gap{background:#F7F0E0;color:#806217}
+.st.fix{background:#E8F0FD;color:#1D4FB0}
+.st.you{background:#000;color:#F3E3B9}
+@media(max-width:880px){.hero-char{width:280px}.hero-char img{height:310px}.hero-char .arch{width:240px;height:270px;border-radius:120px 120px 0 0}.hero-copy{padding:46px 0 44px}}
+@media(max-width:620px){
+ .hero .wrap{align-items:flex-end}
+ .hero-copy{padding:26px 0 40px}
+ .hero-sub{font-size:13.5px;margin-top:12px}
+ .hero-char{width:160px;margin-bottom:-28px;margin-left:auto}
+ .hero-char img{height:260px}
+ .hero-char .arch{width:140px;height:200px;border-radius:70px 70px 0 0;bottom:28px}
+ .hero-char .arch::after{width:170px}
+ .hero + .wrap > section:first-child{padding-top:52px}
+ .nl{gap:12px;padding:13px 0}
+ .nl p{font-size:14px}
+ .st{width:62px;font-size:10px}
+ .nowlist{padding:2px 14px}
+}
 </style>
 </head>
 <body>
@@ -185,8 +224,9 @@ a.row:hover .rgo{color:#C59623;transform:translateX(3px)}
     <p class="eyebrow">Your Cluo hub</p>
     <h1>Your SEO and AI visibility.</h1>
     <div class="rule"></div>
+    <p class="hero-sub">Google Ads, SEO and AI search, explained in plain words. Updated 19 Oct 2026.</p>
   </div>
-  <div class="hero-char"><img src="lewis-character.png" alt=""></div>
+  <div class="hero-char"><span class="arch" aria-hidden="true"></span><img src="lewis-character.png" alt=""></div>
 </div></div>
 
 <div class="wrap">
@@ -213,6 +253,23 @@ a.row:hover .rgo{color:#C59623;transform:translateX(3px)}
         <h3>Invoices</h3>
         <p>Every invoice, labelled by month, ready to download</p>
       </a>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section class="now">
+    <h2>What's happening right now</h2>
+    <p class="nowsub">The short version of your reports. Each line is one fact, then what it means for you.</p>
+    <div class="nowlist">
+      <div class="nl"><span class="st good">Good</span><p><b>You rank 3rd on Google for "family lawyers mittagong".</b> Anyone in Mittagong searching for a family lawyer sees you on the first screen.</p></div>
+      <div class="nl"><span class="st good">Good</span><p><b>ChatGPT names you in 3 of the 12 questions we test.</b> It puts you first for Mittagong family law and business valuation, and second for the Southern Highlands.</p></div>
+      <div class="nl"><span class="st good">Good</span><p><b>Every page on your site loads with its own unique title.</b> The site is healthy, so the work now is about words and reach, not repairs.</p></div>
+      <div class="nl"><span class="st gap">Gap</span><p><b>You are not yet in the top 10 for Bowral, Moss Vale or Southern Highlands divorce searches.</b> Neither local leader has a page for those towns either, so a town page each should move you up quickly.</p></div>
+      <div class="nl"><span class="st gap">Gap</span><p><b>Nothing on your home page mentions Mittagong, and the family law page title is generic.</b> Google has to guess who the page is for. Fixing both so it does not have to.</p></div>
+      <div class="nl"><span class="st gap">Gap</span><p><b>Your Brisbane office is missing from the details Google reads.</b> People searching from Brisbane do not see you there yet. Adding it to the site and Google listing.</p></div>
+      <div class="nl"><span class="st fix">Fixing</span><p><b>Google Ads showed your phone number 1,146 times, but zero calls were counted.</b> Calls are almost certainly happening, they are just not being measured. Call tracking is being set up so every lead counts.</p></div>
+      <div class="nl"><span class="st you">With you</span><p><b>Two blog articles are written and with Isabel for review.</b> Family law myths, and protecting assets with a binding financial agreement. They go live as soon as she signs off.</p></div>
     </div>
   </section>
 </div>
