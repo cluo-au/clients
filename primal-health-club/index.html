@@ -158,6 +158,19 @@ a.row:hover .rgo{color:#A62335;transform:translateX(3px)}
  .tiles .tile:nth-child(4){animation-delay:6s}
 }
 @media(prefers-reduced-motion:reduce){.tiles .tile{animation:none}}
+/* 5-tile row incl. Your leads (24 Nov 2026) */
+.tiles{grid-template-columns:repeat(5,1fr)}
+@media(max-width:1000px){.tiles{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:880px){.tiles{grid-template-columns:1fr 1fr}.tiles .tile:last-child{grid-column:1/-1}}
+@media(max-width:620px){
+ .tiles .tile:last-child{aspect-ratio:auto;flex-direction:row;align-items:center;gap:12px}
+ .tiles .tile:last-child .dash{flex:0 0 46%}
+ .tiles .tile:last-child h3{margin-top:0}
+ .tiles .tile:nth-child(2){animation-delay:1.6s}
+ .tiles .tile:nth-child(3){animation-delay:3.2s}
+ .tiles .tile:nth-child(4){animation-delay:4.8s}
+ .tiles .tile:nth-child(5){animation-delay:6.4s}
+}
 </style>
 </head>
 <body>
@@ -207,6 +220,11 @@ a.row:hover .rgo{color:#A62335;transform:translateX(3px)}
 </svg></div>
         <h3><span class="lbl-d">Your live dashboard</span><span class="lbl-m">Live stats</span></h3>
         <p>Log in to see your traffic, rankings and AI visibility, updated live.</p>
+      </a>
+      <a class="tile tile-stats" href="https://docs.google.com/spreadsheets/d/1hKNMRk4h24wr142Ts0fzzCHJs0fBNVuxDA4cP3irloM/edit" target="_blank" rel="noopener">
+        <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true"><rect width="300" height="120" rx="10" fill="#3A3A3A"/><rect x="54" y="12" width="192" height="98" rx="7" fill="#FAFAF8"/><rect x="54" y="12" width="192" height="22" rx="7" fill="#A62335"/><rect x="54" y="26" width="192" height="8" fill="#A62335"/><rect x="64" y="19" width="44" height="6" rx="3" fill="#fff" opacity=".9"/><rect x="118" y="19" width="34" height="6" rx="3" fill="#fff" opacity=".9"/><rect x="162" y="19" width="50" height="6" rx="3" fill="#fff" opacity=".9"/><g fill="#D9DCDF"><rect x="64" y="44" width="40" height="5" rx="2.5"/><rect x="118" y="44" width="30" height="5" rx="2.5"/><rect x="162" y="44" width="56" height="5" rx="2.5"/><rect x="64" y="60" width="34" height="5" rx="2.5"/><rect x="118" y="60" width="36" height="5" rx="2.5"/><rect x="162" y="60" width="48" height="5" rx="2.5"/><rect x="64" y="76" width="44" height="5" rx="2.5"/><rect x="118" y="76" width="26" height="5" rx="2.5"/><rect x="162" y="76" width="52" height="5" rx="2.5"/></g><rect x="64" y="92" width="40" height="5" rx="2.5" fill="#2B2F36"/><rect x="118" y="92" width="30" height="5" rx="2.5" fill="#2B2F36"/><rect x="162" y="92" width="56" height="5" rx="2.5" fill="#2B2F36"/><circle cx="238" cy="96" r="14" fill="#A62335"/><path d="M231 96 l5 5 l9 -10" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Your leads</h3>
+        <p>Every call and form enquiry, in one sheet</p>
       </a>
       <a class="tile tile-stats" href="https://drive.google.com/drive/folders/1Q1vSUkkMnO2nIpdmUtETKPJl4qg-6CcH" target="_blank" rel="noopener">
         <div class="dash"><svg viewBox="0 0 300 120" width="100%" aria-hidden="true">
